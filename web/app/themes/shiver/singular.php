@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main id="site-content">
-	<p>...</p>
+
 	<?php
 
 	if ( have_posts() ) :
