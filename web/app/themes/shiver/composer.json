@@ -1,0 +1,12 @@
+{
+    "name": "davidpeach/shiver",
+    "description": "David Peach's WordPress theme",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "David Peach",
+            "email": "mail@davidpeach.co.uk"
+        }
+    ],
+    "require": {}
+}
