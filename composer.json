@@ -40,6 +40,7 @@
     "wpackagist-plugin/advanced-custom-fields": "^5.8",
     "wpackagist-plugin/custom-post-type-ui": "^1.7",
     "wpackagist-plugin/jetpack": "^8.1",
+    "wpackagist-plugin/post-type-switcher": "^3.2",
     "wpackagist-plugin/wordpress-seo": "^13.0"
   },
   "require-dev": {
