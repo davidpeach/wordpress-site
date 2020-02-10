@@ -4075,7 +4075,7 @@ body.woocommerce-page .entry-content {
     font-size: 1.9rem; } }
 
 /* Daves extra styles, enit. */
-.post-type-archive-jam .posts-grid .grid-item:nth-child(-n+3) .preview-title::before {
+.category-jams .posts-grid .grid-item:nth-child(-n+3) .preview-title::before {
   content: "Current Jam";
   background-color: firebrick;
   color: #000;
@@ -4087,18 +4087,18 @@ body.woocommerce-page .entry-content {
   top: -5px;
   transform: rotate(-5deg); }
 
-.post-type-archive-jam .posts-grid .grid-item:not(:nth-child(-n+3)) {
+.category-jams .posts-grid .grid-item:not(:nth-child(-n+3)) {
   width: 100%; }
 
-.post-type-archive-jam .posts-grid .grid-item:not(:nth-child(-n+3)) .preview-jam {
+.category-jams .posts-grid .grid-item:not(:nth-child(-n+3)) .preview-jam {
   display: flex;
   flex-direction: row; }
 
-.post-type-archive-jam .posts-grid .grid-item:not(:nth-child(-n+3)) figure {
+.category-jams .posts-grid .grid-item:not(:nth-child(-n+3)) figure {
   width: 140px;
   margin-right: 1em; }
 
-.post-type-archive-jam .posts-grid .grid-item:not(:nth-child(-n+3)) header {
+.category-jams .posts-grid .grid-item:not(:nth-child(-n+3)) header {
   flex-grow: 6; }
 
 /*.post-type-archive-jam .posts-grid .grid-item:not(:nth-child(-n+3)) figure {
