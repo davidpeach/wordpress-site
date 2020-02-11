@@ -1514,12 +1514,11 @@ function bidirectional_acf_update_value( $value, $post_id, $field  ) {
 
 	// return
     return $value;
-
 }
 
 add_filter('acf/update_value/name=album_artist', 'bidirectional_acf_update_value', 10, 3);
 add_filter('acf/update_value/name=jamable_ting', 'bidirectional_acf_update_value', 10, 3);
-
+add_filter('acf/update_value/name=readable_ting', 'bidirectional_acf_update_value', 10, 3);
 
 function is_jam()
 {
@@ -1529,3 +1528,7 @@ function is_jam()
 include __DIR__ . '/includes/post-types/jams.php';
 include __DIR__ . '/includes/post-types/albums.php';
 include __DIR__ . '/includes/post-types/artists.php';
+include __DIR__ . '/includes/post-types/books.php';
+include __DIR__ . '/includes/post-types/films.php';
+include __DIR__ . '/includes/post-types/tag-category-fields.php';
+include __DIR__ . '/includes/post-types/reading.php';
