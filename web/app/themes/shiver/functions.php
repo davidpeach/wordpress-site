@@ -1532,3 +1532,4 @@ include __DIR__ . '/includes/post-types/books.php';
 include __DIR__ . '/includes/post-types/films.php';
 include __DIR__ . '/includes/post-types/tag-category-fields.php';
 include __DIR__ . '/includes/post-types/reading.php';
+include __DIR__ . '/includes/post-types/watches.php';
