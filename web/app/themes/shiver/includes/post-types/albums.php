@@ -62,6 +62,7 @@ function shiver_register_post_type_album(): void
 		"rewrite" => [ "slug" => "album", "with_front" => true ],
 		"query_var" => true,
 		"supports" => [ "title", "editor", "thumbnail" ],
+		"menu_icon" => "dashicons-album",
 	];
 
 	register_post_type( "album", $args );

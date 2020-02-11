@@ -9,7 +9,7 @@ function shiver_register_post_type_film() {
 	$labels = [
 		"name" => __( "Films", "shiver" ),
 		"singular_name" => __( "Film", "shiver" ),
-		"menu_name" => __( "My Films", "shiver" ),
+		"menu_name" => __( "Films", "shiver" ),
 		"all_items" => __( "Films", "shiver" ),
 		"add_new" => __( "Add new", "shiver" ),
 		"add_new_item" => __( "Add new Film", "shiver" ),
@@ -52,7 +52,7 @@ function shiver_register_post_type_film() {
 		"rest_base" => "",
 		"rest_controller_class" => "WP_REST_Posts_Controller",
 		"has_archive" => false,
-		"show_in_menu" => "edit.php?post_type=watch",
+		"show_in_menu" => true,
 		"show_in_nav_menus" => true,
 		"delete_with_user" => false,
 		"exclude_from_search" => false,
@@ -62,6 +62,7 @@ function shiver_register_post_type_film() {
 		"rewrite" => [ "slug" => "film", "with_front" => true ],
 		"query_var" => true,
 		"supports" => [ "title", "editor", "thumbnail" ],
+		"menu_icon" => "dashicons-video-alt2",
 	];
 
 	register_post_type( "film", $args );

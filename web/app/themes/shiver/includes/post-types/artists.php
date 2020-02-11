@@ -62,6 +62,7 @@ function shiver_register_post_type_music_artist() {
 		"rewrite" => [ "slug" => "music_artist", "with_front" => true ],
 		"query_var" => true,
 		"supports" => [ "title", "editor", "thumbnail" ],
+		"menu_icon" => "dashicons-businessperson",
 	];
 
 	register_post_type( "music_artist", $args );
