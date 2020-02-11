@@ -1522,12 +1522,22 @@ add_filter('acf/update_value/name=readable_ting', 'bidirectional_acf_update_valu
 
 function is_jam()
 {
-	return is_category() && in_category('jams', get_the_ID());
+	if (is_category() && in_category('jams', get_the_ID())) {
+		$jam = get_field('jamable_ting');
+		return get_post($jam[0]->ID);
+	}
+
+	return false;
 }
 
 function is_read()
 {
-	return is_category() && in_category('reading', get_the_ID());
+	if (is_category() && in_category('reading', get_the_ID())) {
+		$read = get_field('readable_ting');
+		return get_post($read[0]->ID);
+	}
+
+	return false;
 }
 
 include __DIR__ . '/includes/post-types/jams.php';
@@ -1538,3 +1548,63 @@ include __DIR__ . '/includes/post-types/films.php';
 include __DIR__ . '/includes/post-types/tag-category-fields.php';
 include __DIR__ . '/includes/post-types/reading.php';
 include __DIR__ . '/includes/post-types/watches.php';
+
+function shiver_get_the_post_thumbnail_url( $postID, $size )
+{
+	if (in_category('reading', $postID)) {
+		$read = get_field('readable_ting');
+		return get_the_post_thumbnail_url( $read[0]->ID, $size );
+	} elseif (in_category('jams', $postID)) {
+		$jam = get_field('jamable_ting');
+		return get_the_post_thumbnail_url( $jam[0]->ID, $size );
+	}
+
+	return get_the_post_thumbnail_url( $postID, $size );
+}
+
+function shiver_the_post_thumbnail( $postID, $size = 'large' )
+{
+	if (in_category('reading', $postID)) {
+		$read = get_field('readable_ting');
+		return the_post_thumbnail( $read[0]->ID, $size );
+	} elseif (in_category('jams', $postID)) {
+		$jam = get_field('jamable_ting');
+		return the_post_thumbnail( $jam[0]->ID, $size );
+	}
+
+	return the_post_thumbnail( $postID, $size );
+}
+
+function shiver_has_post_thumbnail($postID = null)
+{
+	if (in_category('reading', $postID)) {
+		$read = get_field('readable_ting');
+		return has_post_thumbnail( $read[0]->ID);
+	} elseif (in_category('jams', $postID)) {
+		$jam = get_field('jamable_ting');
+		return has_post_thumbnail( $jam[0]->ID);
+	}
+
+	return has_post_thumbnail($postID);
+}
+
+/**
+ * Return extra info for a post
+ * @return string
+ */
+function shiver_extra_post_info($postID)
+{
+	$string = '';
+
+	if (in_category('reading', $postID)) {
+		$read = get_field('readable_ting');
+		$image = get_the_post_thumbnail_url($read[0]->ID, 'post-thumbnail');
+		$string .= '<figure><img src="' . $image . '"></figure>';
+	} elseif (in_category('jams', $postID)) {
+		$jam = get_field('jamable_ting');
+		$image = get_the_post_thumbnail_url($jam[0]->ID, 'post-thumbnail');
+		$string .= '<figure><img src="' . $image . '"></figure>';
+	}
+
+	return $string . '<br>';
+}

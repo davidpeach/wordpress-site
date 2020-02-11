@@ -15,7 +15,7 @@
 
 		$section_inner_classes = '';
 
-		$image_url = ! post_password_required() ? get_the_post_thumbnail_url( $post->ID, 'shiver_fullscreen' ) : '';
+		$image_url = ! post_password_required() ? shiver_get_the_post_thumbnail_url( $post->ID, 'shiver_fullscreen' ) : '';
 
 		if ( $image_url ) {
 			$cover_header_style 	= ' style="background-image: url( ' . esc_url( $image_url ) . ' );"';
@@ -80,7 +80,7 @@
 
 				<?php
 
-				the_post_thumbnail();
+				shiver_the_post_thumbnail(get_the_ID());
 
 				$caption = get_the_post_thumbnail_caption();
 
@@ -101,6 +101,8 @@
 
 
 		<div class="entry-content">
+
+			<?php echo shiver_extra_post_info(get_the_ID()); ?>
 
 			<?php
 			the_content();
