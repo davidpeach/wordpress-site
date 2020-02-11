@@ -4,6 +4,7 @@
 
 	$fallback_image_url = shiver_get_fallback_image_url();
 	$jam = is_jam();
+	$read = is_read();
 
 	if ( ( has_post_thumbnail() && ! post_password_required() ) || $fallback_image_url ) : ?>
 
@@ -25,6 +26,13 @@
 				$image_size = shiver_get_preview_image_size();
 				$jam = get_field('jamable_ting');
 				$image_url = get_the_post_thumbnail_url( $jam[0]->ID, $image_size );
+
+			} elseif ($read !== false) {
+
+				// READING
+				$image_size = shiver_get_preview_image_size();
+				$read = get_field('readable_ting');
+				$image_url = get_the_post_thumbnail_url( $read[0]->ID, 'large' );
 
 			} else {
 				$image_url = $fallback_image_url;
@@ -55,15 +63,14 @@
 
 	<header class="preview-header">
 
-		<?php
-		the_title( '<h2 class="preview-title heading-size-3"><a href="' . get_the_permalink() . '">', '</a></h2>' );
-
-		if ($jam !== false) {
-		?>
+		<?php the_title( '<h2 class="preview-title heading-size-3"><a href="' . get_the_permalink() . '">', '</a></h2>' ); ?>
+		<?php if ($jam !== false): ?>
 			<p><?php echo $jam[0]->post_title ?></p>
-		<?php
-		}
+		<?php elseif ($read !== false): ?>
+			<p><?php echo $read[0]->post_title ?></p>
+		<?php endif; ?>
 
+		<?php
 		if ( get_theme_mod( 'shiver_display_excerpts', false ) ) :
 
 			$excerpt = get_the_excerpt();

@@ -1525,6 +1525,11 @@ function is_jam()
 	return is_category() && in_category('jams', get_the_ID());
 }
 
+function is_read()
+{
+	return is_category() && in_category('reading', get_the_ID());
+}
+
 include __DIR__ . '/includes/post-types/jams.php';
 include __DIR__ . '/includes/post-types/albums.php';
 include __DIR__ . '/includes/post-types/artists.php';
