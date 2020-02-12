@@ -1608,3 +1608,66 @@ function shiver_extra_post_info($postID)
 
 	return $string . '<br>';
 }
+
+/**
+ * Return the color used to overlay the cover images
+ * @return string
+ */
+function getColorOverlayStyle()
+{
+	$color_overlay_color = get_theme_mod( 'shiver_cover_template_overlay_background_color' );
+
+	if ( $color_overlay_color ) {
+		return ' style="color: ' . esc_attr( $color_overlay_color ) . ';"';
+	}
+
+	return '';
+}
+
+function getCoverHeaderStyle()
+{
+	$image_url = ! post_password_required() ? shiver_get_the_post_thumbnail_url( $post->ID, 'shiver_fullscreen' ) : '';
+
+	if ($image_url) {
+		return ' style="background-image: url( ' . esc_url( $image_url ) . ' );"';
+	}
+
+	return '';
+}
+
+function getCoverHeaderClasses()
+{
+	$cover_header_classes = '';
+
+	$image_url = ! post_password_required() ? shiver_get_the_post_thumbnail_url( $post->ID, 'shiver_fullscreen' ) : '';
+
+	if ($image_url) {
+		$cover_header_classes .= ' bg-image';
+	}
+
+	if ( get_theme_mod( 'shiver_cover_template_fixed_background', true ) ) {
+		$cover_header_classes .= ' bg-attachment-fixed';
+	}
+
+	return $cover_header_classes;
+}
+
+function getColorOverlayClasses()
+{
+	$color_overlay_classes = '';
+
+	$color_overlay_opacity = get_theme_mod( 'shiver_cover_template_overlay_opacity' );
+	$color_overlay_opacity = ( $color_overlay_opacity === false ) ? 80 : $color_overlay_opacity;
+	$color_overlay_classes .= ' opacity-' . $color_overlay_opacity;
+
+	$color_overlay_opacity = get_theme_mod( 'shiver_cover_template_overlay_blend_mode', 'multiply' );
+	$color_overlay_classes .= ' blend-mode-' . $color_overlay_opacity;
+
+	return $color_overlay_classes;
+}
+
+function getSectionInnerClasses()
+{
+	$overlay_fade_text = get_theme_mod( 'shiver_cover_template_fade_text', true );
+	return $overlay_fade_text ? ' fade-block' : '';
+}
