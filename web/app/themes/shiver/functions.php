@@ -1624,9 +1624,19 @@ function getColorOverlayStyle()
 	return '';
 }
 
-function getCoverHeaderStyle()
+function getImageURL($postID)
 {
-	$image_url = ! post_password_required() ? shiver_get_the_post_thumbnail_url( $post->ID, 'shiver_fullscreen' ) : '';
+	if (is_tag() || is_category()) {
+		$term = get_queried_object();
+		return get_field('tag_image', $term);
+	}
+
+	return ! post_password_required() ? shiver_get_the_post_thumbnail_url( $postID, 'shiver_fullscreen' ) : '';
+}
+
+function getCoverHeaderStyle($postID)
+{
+	$image_url = getImageURL($postID);
 
 	if ($image_url) {
 		return ' style="background-image: url( ' . esc_url( $image_url ) . ' );"';
@@ -1635,11 +1645,11 @@ function getCoverHeaderStyle()
 	return '';
 }
 
-function getCoverHeaderClasses()
+function getCoverHeaderClasses($postID)
 {
 	$cover_header_classes = '';
 
-	$image_url = ! post_password_required() ? shiver_get_the_post_thumbnail_url( $post->ID, 'shiver_fullscreen' ) : '';
+	$image_url = getImageURL($postID);
 
 	if ($image_url) {
 		$cover_header_classes .= ' bg-image';

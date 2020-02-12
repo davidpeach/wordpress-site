@@ -2,7 +2,7 @@
 // On the cover page template, output the cover header
 if ( is_page_template( array( 'template-cover.php', 'template-full-width-cover.php' ) ) ) :
 	?>
-	<div class="cover-header screen-height screen-width<?php echo esc_attr( getCoverHeaderClasses() ); ?>"<?php echo getCoverHeaderStyle(); ?>>
+	<div class="cover-header screen-height screen-width<?php echo esc_attr( getCoverHeaderClasses($post->ID) ); ?>"<?php echo getCoverHeaderStyle($post->ID); ?>>
 		<div class="cover-header-inner-wrapper">
 			<div class="cover-header-inner">
 
