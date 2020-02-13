@@ -27,12 +27,8 @@
 	</div><!-- .cover-header -->
 
 	<div class="posts section-inner post-inner">
-		<?php if ( have_posts() ) :
-
-			$post_grid_column_classes = shiver_get_post_grid_column_classes();
-
-			?>
-			<div class="posts-grid grid load-more-target <?php echo $post_grid_column_classes; ?>">
+		<?php if ( have_posts() ) : ?>
+			<div class="posts-grid grid load-more-target <?php echo shiver_get_post_grid_column_classes(); ?>">
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
