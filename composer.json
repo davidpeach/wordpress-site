@@ -38,6 +38,7 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "vlucas/phpdotenv": "^3.4.0",
     "wpackagist-plugin/advanced-custom-fields": "^5.8",
+    "wpackagist-plugin/gutenberg": "^7.5",
     "wpackagist-plugin/jetpack": "^8.1",
     "wpackagist-plugin/post-type-switcher": "^3.2",
     "wpackagist-plugin/wordpress-seo": "^13.0"
