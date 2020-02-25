@@ -1594,6 +1594,7 @@ function shiver_has_post_thumbnail($postID = null)
  */
 function shiver_extra_post_info($postID)
 {
+	return '';
 	$string = '';
 
 	if (in_category('reading', $postID)) {
