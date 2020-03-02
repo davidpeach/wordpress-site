@@ -1406,22 +1406,6 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	endif;
 endif;
 
-function shiver_alter_the_loop($query)
-{
-	if ($query->is_category('jams')) {
-		$query->set('meta_query', array(
-		    array(
-		       'key' => 'current_jam',
-		    )
-		));
-		$query->set('orderby', 'current_jam');
-		$query->set('order', 'desc');
-	}
-
-	return $query;
-}
-add_action('pre_get_posts', 'shiver_alter_the_loop');
-
 function bidirectional_acf_update_value( $value, $post_id, $field  ) {
 
 	// vars
