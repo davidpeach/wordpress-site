@@ -102,8 +102,6 @@
 
 		<div class="entry-content">
 
-			<?php echo shiver_extra_post_info(get_the_ID()); ?>
-
 			<?php
 			the_content();
 			wp_link_pages( array(

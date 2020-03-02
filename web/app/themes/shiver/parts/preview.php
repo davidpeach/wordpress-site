@@ -3,8 +3,6 @@
 	<?php
 
 	$fallback_image_url = shiver_get_fallback_image_url();
-	$jam = is_jam();
-	$read = is_read();
 
 	if ( ( has_post_thumbnail() && ! post_password_required() ) || $fallback_image_url ) : ?>
 
@@ -50,11 +48,6 @@
 	<header class="preview-header">
 
 		<?php the_title( '<h2 class="preview-title heading-size-3"><a href="' . get_the_permalink() . '">', '</a></h2>' ); ?>
-		<?php if ($jam !== false): ?>
-			<p><?php echo $jam->post_title ?></p>
-		<?php elseif ($read !== false): ?>
-			<p><?php echo $read->post_title ?></p>
-		<?php endif; ?>
 
 		<?php
 		if ( get_theme_mod( 'shiver_display_excerpts', false ) ) :
