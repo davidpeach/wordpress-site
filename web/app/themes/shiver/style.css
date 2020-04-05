@@ -5256,11 +5256,18 @@ h6, .heading-size-6 {
     font-size: 1.9rem;
   }
 }
-/* Daves extra styles, enit. */
-/*.post-type-archive-jam .posts-grid .grid-item:not(:nth-child(-n+3)) figure {
-	display: flex;
+.archive-content__text {
+  font-size: 1.7rem;
 }
-
-preview-media*/
+@media (min-width: 48rem) {
+  .archive-content__text {
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 65rem) {
+  .archive-content__text {
+    font-size: 2.8rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

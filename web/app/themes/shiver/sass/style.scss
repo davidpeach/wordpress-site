@@ -47,7 +47,6 @@
 /*	0. CSS Reset
 /* -------------------------------------------------------------------------------- */
 
-
 html, body {
 	border: none;
 	margin: 0;
@@ -4890,41 +4889,15 @@ body.woocommerce-page .entry-content {
 
 }
 
-/* Daves extra styles, enit. */
 
-// Special layout for Jams
-// .post-type-archive-jam .posts-grid .grid-item:nth-child(-n+3) .preview-title::before {
-// 	content: "Current Jam";
-// 	background-color: firebrick;
-// 	color: #000;
-// 	margin-right: .5em;
-// 	font-size: .8em;
-// 	padding: .1em;
-// 	display: inline-block;
-// 	position: relative;
-// 	top: -5px;
-// 	transform: rotate(-5deg);
-// }
+.archive-content__text {
+	font-size: 1.7rem;
 
-// .post-type-archive-jam .posts-grid .grid-item:not(:nth-child(-n+3)) {
-// 	width: 100%;
-// }
-// .post-type-archive-jam .posts-grid .grid-item:not(:nth-child(-n+3)) .preview-jam {
-// 	display: flex;
-// 	flex-direction: row;
-// }
+	@media(min-width: 48rem) {
+		font-size: 2.3rem;
+	}
 
-// .post-type-archive-jam .posts-grid .grid-item:not(:nth-child(-n+3)) figure {
-// 	width: 140px;
-// 	margin-right: 1em;
-// }
-// .post-type-archive-jam .posts-grid .grid-item:not(:nth-child(-n+3)) header {
-// 	flex-grow: 6;
-// }
-
-
-/*.post-type-archive-jam .posts-grid .grid-item:not(:nth-child(-n+3)) figure {
-	display: flex;
+	@media(min-width: 65rem) {
+		font-size: 2.8rem;
+	}
 }
-
-preview-media*/
