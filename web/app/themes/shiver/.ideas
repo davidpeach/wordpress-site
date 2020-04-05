@@ -1,7 +1,11 @@
 Archive pages
- - 50vh header height
+	-	Optional gallery in header
+		-	Images from some images in the category / tag etc
+	-	Header height options
+ 		-	50vh header height
+ 		- 	100vh header height
 
 Single post pages
- - 50vh header height
- - 100vh header height
- - Optional gallery in header
+	-	Header height options
+ 		-	50vh header height
+ 		- 	100vh header height

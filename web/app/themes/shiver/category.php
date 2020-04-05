@@ -6,15 +6,14 @@
 	<?php set_query_var( 'description', get_the_archive_description() ); ?>
 	<?php set_query_var( 'image_url', get_field('tag_image', get_queried_object()) ); ?>
 
-	<?php get_template_part('parts/headers/header', 'full'); ?>
+	<!-- @TODO Add option to use full or half header in admin -->
+	<?php get_template_part('parts/headers/header', 'half'); ?>
 
 
 
 
-
+	<!-- @TODO BELOW HERE NEEDS TIDYING -->
 	<div class="posts section-inner post-inner">
-
-
 
 		<?php if ( have_posts() ) :
 

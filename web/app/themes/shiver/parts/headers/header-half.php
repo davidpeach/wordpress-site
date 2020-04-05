@@ -1,4 +1,4 @@
-<div class="cover-header screen-height screen-width bg-image bg-attachment-fixed" style="background-image: url( <?php echo esc_url( $image_url ); ?> );">
+<div class="cover-header screen-width bg-image bg-attachment-fixed" style="background-image: url( <?php echo esc_url( $image_url ); ?> );">
 	<div class="cover-header-inner-wrapper">
 		<div class="cover-header-inner">
 			<div class="cover-color-overlay color-accent opacity-80 blend-mode-normal" style="color: #292b29;"></div>
