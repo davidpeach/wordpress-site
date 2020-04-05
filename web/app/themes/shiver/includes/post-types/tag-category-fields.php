@@ -32,6 +32,25 @@ function shiver_register_acf_group_tag_category_fields(): void
 					'max_size' => '',
 					'mime_types' => '',
 				),
+				array(
+					'key' => 'field_5e89ba585f335',
+					'label' => 'Content',
+					'name' => 'content',
+					'type' => 'wysiwyg',
+					'instructions' => 'Add some content to act as a deep introduction to the archive. This will appear at the top of the first page of results per archive.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'tabs' => 'all',
+					'toolbar' => 'full',
+					'media_upload' => 1,
+					'delay' => 0,
+				),
 			),
 			'location' => array(
 				array(
