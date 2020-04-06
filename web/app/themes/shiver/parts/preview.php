@@ -13,10 +13,10 @@
 
 			$aspect_ratio = get_theme_mod( 'shiver_preview_image_aspect_ratio', '16x10' );
 
-			if ( shiver_has_post_thumbnail() && ! post_password_required() ) {
+			if ( has_post_thumbnail() && ! post_password_required() ) {
 
 				$image_size = shiver_get_preview_image_size();
-				$image_url = shiver_get_the_post_thumbnail_url( $post->ID, $image_size );
+				$image_url = get_the_post_thumbnail_url( $post->ID, $image_size );
 
 			} else {
 				$image_url = $fallback_image_url;
@@ -32,7 +32,7 @@
 
 					<?php
 					if ( has_post_thumbnail() && ! post_password_required() ) {
-						shiver_the_post_thumbnail( $post->ID, $image_size );
+						the_post_thumbnail( $post->ID, $image_size );
 					} else {
 						echo '<img src="' . esc_url( $fallback_image_url ) . '" />';
 					}
