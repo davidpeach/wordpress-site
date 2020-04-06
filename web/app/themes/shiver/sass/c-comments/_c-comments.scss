@@ -1,0 +1,249 @@
+/* -------------------------------------------------------------------------------- */
+/*	12. Comments
+/* -------------------------------------------------------------------------------- */
+
+
+/* Comment Headers ----------------------------- */
+
+.comments-wrapper {
+	margin-top: 5rem;
+}
+
+.comments-header {
+	align-items: baseline;
+	display: flex;
+	justify-content: space-between;
+}
+
+.comment-reply-title {
+	margin: 0 0 3rem 0;
+}
+
+.comment-reply-title small {
+	font-size: 1.8rem;
+}
+
+
+/* Comment Item ----------------------------- */
+
+/* COMMENT HEADER */
+
+.comments .comment,
+.comments .pingback,
+.comments .trackback,
+.comments .review {
+	padding-top: 3.5rem;
+}
+
+div.comment:first-of-type {
+	margin-top: 3.5rem;
+	padding-top: 0;
+}
+
+.comments .comments-header + div {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.comment-body {
+	position: relative;
+}
+
+.comments a {
+	color: inherit;
+}
+
+.comment .comment {
+	border-left: .1rem solid #e1e1e3;
+	padding-left: 5%;
+}
+
+.comment-meta {
+	line-height: 1.1;
+}
+
+.comment-meta {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -.5em 0 1.2em -1.2em;
+}
+
+.comment-meta .avatar {
+	display: none;
+}
+
+.comment-meta a {
+	border-bottom: .1rem solid transparent;
+	text-decoration: none;
+	transition: border-color .15s linear;
+}
+
+.comment-meta a:hover {
+	text-decoration: underline;
+}
+
+.comment-author,
+.comment-metadata {
+	margin: .5em 0 0 1.2em;
+}
+
+.comment-author {
+	font-weight: 500;
+}
+
+.comment-author .url {
+	text-decoration: underline;
+}
+
+
+/* COMMENT CONTENT */
+
+.comment-content > *:first-child { margin-top: 0; }
+.comment-content > *:last-child { margin-bottom: 0; }
+
+.comment-content p {
+	margin-bottom: 1em;
+}
+
+.comment-content h1 { font-size: 2em; }
+.comment-content h2 { font-size: 1.8em; }
+.comment-content h3 { font-size: 1.6em; }
+.comment-content h4 { font-size: 1.4em; }
+.comment-content h5 { font-size: 1.2em; }
+.comment-content h6 { font-size: 1em; }
+
+/* COMMENT FOOTER */
+
+.comment-footer-meta {
+	line-height: 1;
+	margin: 1.2em 0 0;
+}
+
+.comment-footer-meta > * + * {
+	margin-left: 1.2em;
+}
+
+.bypostauthor .comment-footer-meta .by-post-author {
+	display: inline;
+}
+
+.comment-footer-meta a { text-decoration: none; }
+.comment-footer-meta a:hover { text-decoration: underline; }
+
+
+/* Pingbacks & Trackbacks ------------------------- */
+
+.pingback .comment-meta,
+.trackback .comment-meta {
+	padding-left: 0;
+}
+
+
+/* Comments Pagination ---------------------------- */
+
+.comments-pagination {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 6rem;
+	text-align: center;
+}
+
+.comments-pagination.only-next {
+	justify-content: flex-end;
+}
+
+.comments-pagination .page-numbers {
+	display: none;
+	text-decoration: none;
+}
+
+.comments-pagination .page-numbers:hover {
+	text-decoration: underline;
+}
+
+.comments-pagination .prev,
+.comments-pagination .next {
+	display: block;
+}
+
+.comments-pagination .prev {
+	left: 0;
+}
+
+.comments-pagination .next {
+	right: 0;
+	text-align: right;
+}
+
+
+/* Comment Respond ---------------------------- */
+
+.comment-respond:not(:first-child) {
+	padding-top: 6rem;
+}
+
+.comment-form {
+	margin-top: 2.2rem;
+}
+
+.comment-form p.logged-in-as {
+	font-size: 1em;
+	line-height: 1.25;
+	margin: -1.2rem 0 2.8rem 0;
+}
+
+.comment-form:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.comment-respond .logged-in-as {
+	margin: -2rem 0 3rem 0;
+}
+
+.comment-respond .logged-in-as a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.comment-respond .logged-in-as a:hover {
+	text-decoration: underline;
+}
+
+.comment-form p {
+	line-height: 1.1;
+	margin-bottom: 2rem;
+}
+
+.comment-form-cookies-consent {
+	align-items: baseline;
+	display: flex;
+}
+
+.comment-form > p:last-of-type {
+	margin-bottom: 0;
+}
+
+.comment-respond label {
+	display: block;
+}
+
+.comment-respond input[type="text"],
+.comment-respond input[type="email"],
+.comment-respond textarea {
+	margin-bottom: 0;
+}
+
+.comment-respond #submit {
+	display: block;
+	margin-left: auto;
+}
+
+
+/* Reply Respond ---------------------------- */
+
+.comments .comment-respond {
+	padding: 3rem 0 0;
+}

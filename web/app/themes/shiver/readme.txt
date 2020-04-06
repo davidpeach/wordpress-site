@@ -1,5 +1,5 @@
 === shiver (copied from Chaplin) ===
-Contributors: Anlino
+Contributors: Anlino (Chaplin), David Peach
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=anders%40andersnoren%2ese&lc=US&item_name=Free%20WordPress%20Themes%20from%20Anders%20Noren&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Requires at least: 4.5
 Requires PHP: 5.4
@@ -160,8 +160,8 @@ Modernizr Code
 License: MIT License, https://opensource.org/licenses/MIT
 Source: https://modernizr.com/
 
-Illustration in screenshot.png by Anders Norén
-License: Public Domain
+Illustration in screenshot.png by Junji Ito
+License: Unknown
 Icons in screenshot.png by Feather Icons
 
 Code from Twenty Twenty

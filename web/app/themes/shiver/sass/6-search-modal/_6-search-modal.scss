@@ -1,0 +1,96 @@
+/* --------------------------------------------------------------------------------------------- */
+/*	6. Search Modal
+/* --------------------------------------------------------------------------------------------- */
+
+
+.search-modal {
+	background: rgba( 0, 0, 0, .2 );
+	display: none;
+	opacity: 0;
+	position: fixed;
+		bottom: 0;
+		left: -9999rem;
+		top: 0;
+	transition: opacity .2s linear, left 0s .2s linear;
+	width: 100%;
+	z-index: 999;
+}
+
+.search-modal-inner {
+	transform: translateY( -100% );
+	transition: transform .15s linear, box-shadow .15s linear;
+}
+
+.search-modal-inner .section-inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.search-modal.active {
+	left: 0;
+	opacity: 1;
+	transition: opacity .2s linear;
+}
+
+.search-modal.active .search-modal-inner {
+	box-shadow: 0 0 2rem 0 rgba( 0, 0, 0, .08 );
+	transform: translateY( 0 );
+	transition: transform .25s ease-in-out, box-shadow .1s .25s linear;
+}
+
+.search-untoggle {
+	align-items: center;
+	display: flex;
+	flex-shrink: 0;
+	justify-content: center;
+	margin-right: -2.5rem;
+	padding: 0 2.5rem;
+}
+
+.search-modal.active .search-untoggle {
+	animation: popIn both .3s .2s;
+}
+
+.search-untoggle svg {
+	height: 1.5rem;
+	transition: transform .15s ease-in-out;
+	width: 1.5rem;
+}
+
+.search-untoggle:hover svg {
+	transform: scale( 1.15 );
+}
+
+
+/* Modal Search Form ------------------------- */
+
+.modal-search-form {
+	position: relative;
+	width: 100%;
+}
+
+.modal-search-form .search-field {
+	background: none;
+	border: none;
+	border-radius: 0;
+	color: inherit;
+	font-size: 2rem;
+	height: 8rem;
+	padding: 0;
+	width: 100%;
+}
+
+.modal-search-form .search-field::-webkit-input-placeholder { color: inherit; }
+.modal-search-form .search-field:-ms-input-placeholder { color: inherit; }
+.modal-search-form .search-field::-moz-placeholder { color: inherit; line-height: 8rem; }
+
+.modal-search-form .search-submit {
+	position: absolute;
+		right: -9999rem;
+		top: 50%;
+	transform: translateY( -50% );
+}
+
+.modal-search-form .search-submit:focus {
+	right: 0;
+}

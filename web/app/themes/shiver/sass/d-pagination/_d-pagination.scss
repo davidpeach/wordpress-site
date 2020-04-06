@@ -1,0 +1,88 @@
+/* --------------------------------------------------------------------------------------------- */
+/*	13. Site Pagination
+/* --------------------------------------------------------------------------------------------- */
+
+
+.pagination-wrapper {
+	margin-top: 6rem;
+}
+
+.no-js .pagination-wrapper {
+	display: block !important;
+}
+
+.pagination-wrapper.pagination-type-button.loaded-last-page,
+.pagination-wrapper.pagination-type-scroll.loaded-last-page {
+	display: none;
+}
+
+#pagination {
+	height: 6rem;
+	position: relative;
+	text-align: center;
+}
+
+#load-more,
+#pagination .loading-icon,
+#pagination .out-of-posts {
+	position: absolute;
+		left: 50%;
+		top: 50%;
+	transform: translateX( -50% ) translateY( -50% );
+	transition: color .2s linear, opacity .2s linear, transform .2s ease-out;
+}
+
+#pagination:not(.last-page) .out-of-posts,
+#pagination.loading #load-more,
+#pagination.last-page #load-more,
+#pagination:not(.loading) .loading-icon {
+	left: -9999rem;
+	opacity: 0;
+	transform: translateX( -50% ) translateY( -50% ) scale( 0.5 );
+	transition: opacity .2s linear, transform .2s ease-out, left 0s .2s, right 0s .2s;
+}
+
+#pagination:not(.pagination-type-button) #load-more {
+	display: none;
+}
+
+html.js body:not(.pagination-type-links) .link-pagination {
+	display: none;
+}
+
+.no-js #load-more,
+.no-js #pagination .loading-icon {
+	display: none;
+}
+
+#pagination .out-of-posts {
+	margin: 0;
+	text-align: center;
+	width: 100%;
+}
+
+/* LINK PAGINATION */
+
+.link-pagination {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	font-weight: 600;
+	justify-content: space-between;
+}
+
+.link-pagination.only-next {
+	justify-content: flex-end;
+}
+
+.link-pagination a {
+	text-decoration: none;
+}
+
+.link-pagination a:hover {
+	text-decoration: underline;
+}
+
+.link-pagination a + a {
+	margin-left: 2rem;
+}

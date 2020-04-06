@@ -1,0 +1,72 @@
+/* --------------------------------------------------------------------------------------------- */
+/*	17. Site Footer
+/* --------------------------------------------------------------------------------------------- */
+
+
+#site-footer {
+	margin-top: 6rem;
+}
+
+
+/* Footer Widgets ---------------------------- */
+
+.footer-widgets-outer-wrapper {
+	margin-bottom: 6rem;
+}
+
+
+/* Footer Inner ------------------------------ */
+
+.footer-inner {
+	font-size: 1.4rem;
+	padding: 0 0 3.5rem 0;
+}
+
+.footer-menu {
+	margin: 0 0 1.5rem 0;
+}
+
+.footer-menu li {
+	border-color: #E1E1E3;
+	border-style: solid;
+	border-width: .1rem 0 0 0;
+	line-height: 1.25;
+}
+
+.footer-menu li:last-child {
+	border-bottom-width: .1rem;
+}
+
+.footer-menu a {
+	display: block;
+	padding: 1.2rem 0;
+}
+
+
+/* Footer Credits ---------------------------- */
+
+.footer-inner a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.footer-inner a:hover {
+	text-decoration: underline;
+}
+
+.footer-credits {
+	font-size: 1.2rem;
+}
+
+.footer-copyright,
+.theme-credits {
+	margin: 0;
+}
+
+.footer-copyright {
+	font-weight: 600;
+}
+
+.theme-credits {
+	white-space: nowrap;
+}

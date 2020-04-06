@@ -1,0 +1,16 @@
+/* --------------------------------------------------------------------------------------------- */
+/*	7c. Template: Full Width
+/* --------------------------------------------------------------------------------------------- */
+
+
+.has-full-width-content .entry-content,
+.has-full-width-content .entry-content .alignwide {
+	max-width: 100%;
+	width: 100%;
+}
+
+.has-full-width-content .entry-content .alignfull {
+	margin-left: calc( 50% - 50vw );
+	max-width: 100vw;
+	width: 100vw;
+}

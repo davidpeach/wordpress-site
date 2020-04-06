@@ -1,0 +1,369 @@
+/* -------------------------------------------------------------------------------- */
+/*	4.	Site Header
+/* -------------------------------------------------------------------------------- */
+
+
+#site-header {
+	background: transparent;
+	margin-bottom: 5rem;
+}
+
+.header-inner {
+	align-items: center;
+	background: transparent;
+	display: flex;
+	min-height: 8rem;
+	position: relative;
+	transition: none;
+}
+
+.overlay-header .header-inner {
+	color: #fff;
+	z-index: 1;
+}
+
+.header-inner.is-sticky {
+	background: #fff;
+}
+
+.header-inner .section-inner {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-titles {
+	align-items: baseline;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 0 0 0 -2.5rem;
+}
+
+.wp-custom-logo .header-titles {
+	align-items: center;
+}
+
+.site-title,
+.site-logo {
+	margin: 0 0 0 2.5rem;
+}
+
+.site-title {
+	font-size: 2.2rem;
+	line-height: 1;
+}
+
+.overlay-header .site-title {
+	color: inherit;
+}
+
+.site-title a {
+	color: inherit;
+	display: block;
+	text-decoration: none;
+}
+
+.site-logo a,
+.site-logo img {
+	display: block;
+}
+
+.site-logo img {
+	max-height: 6rem;
+	width: auto;
+}
+
+.site-description {
+	display: none;
+	margin: 0 0 0 2.5rem;
+	transition: all .15s linear;
+}
+
+.breadcrumbs {
+	margin-top: 20px;
+}
+
+
+/* Sticky Header ----------------------------- */
+
+.header-inner.is-sticky {
+	box-shadow: 0 0 1rem rgba( 0, 0, 0, 0.10 );
+	position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+	transition: box-shadow .2s linear, background-color .2s linear;
+	z-index: 5;
+}
+
+.showing-menu-modal .header-inner.is-sticky {
+	box-shadow: none;
+}
+
+
+/* Overlay Header ---------------------------- */
+
+.overlay-header #site-header {
+	margin: 0;
+	position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+}
+
+.overlay-header:not(.showing-menu-modal):not(.overlay-header-has-text-color) .header-inner:not(.is-sticky) {
+	color: #fff;
+}
+
+
+/* Header Navigation ------------------------- */
+
+.header-navigation-wrapper {
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+}
+
+/* Header Toggles ---------------------------- */
+
+.header-toggles {
+	display: flex;
+	flex-shrink: 0;
+	justify-content: flex-end;
+	margin: 0 -1.25rem 0 2rem;
+	overflow: hidden;
+}
+
+.header-toggles .toggle {
+	align-items: center;
+	display: flex;
+	height: 8rem;
+	justify-content: flex-end;
+	padding: 0 1.25rem;
+	position: relative;
+	text-decoration: none;
+}
+
+.header-toggles .toggle:hover,
+.header-toggles .toggle:focus {
+	outline: none;
+	text-decoration: underline;
+}
+
+.header-toggles .toggle path {
+	fill: currentColor;
+}
+
+.header-toggles .toggle-text {
+	display: none;
+	font-size: 1.6rem;
+	font-weight: 500;
+	margin: 0 1.5rem 0 0;
+	white-space: nowrap;
+}
+
+.header-toggles .toggle:not(.active) .hide { display: none; }
+.header-toggles .toggle.active .show { display: none; }
+
+/* Search Toggle ----------------------------- */
+
+.search-toggle svg {
+	height: 1.8rem;
+	width: 1.8rem;
+}
+
+/* Navigation Toggle ------------------------- */
+
+.nav-toggle {
+	width: auto;
+}
+
+.nav-toggle .bars {
+	height: 1.4rem;
+	position: relative;
+	width: 2rem;
+}
+
+.nav-toggle .bar {
+	background: currentColor;
+	display: block;
+	height: .18rem;
+	position: absolute;
+		right: 0;
+		top: 50%;
+	transition: transform 0.2s ease-in, opacity 0s ease-out 0.2s, margin 0.2s ease-out 0.2s;
+	width: 100%;
+}
+
+.nav-toggle .bar:nth-child(1) { margin-top: -.6rem; }
+.nav-toggle .bar:nth-child(3) { margin-top: 0.6rem; }
+
+.nav-toggle.active .bar {
+	transition: margin 0.2s ease-in, opacity 0s ease-in 0.2s, transform 0.2s ease-out 0.25s;
+}
+
+.nav-toggle.active .bar:nth-child(1) {
+	margin-top: 0;
+	transform: rotate( 45deg );
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+	opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+	margin-top: 0;
+	transform: rotate( -45deg );
+}
+
+/* Main Menu Alt ----------------------------- */
+
+.main-menu-alt-container {
+	display: none;
+	margin-left: 6rem;
+}
+
+ul.main-menu-alt {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	margin: -1.5rem 0 0 -3rem;
+}
+
+.main-menu-alt li {
+	font-size: inherit;
+	line-height: 1.25;
+	position: relative;
+}
+
+.main-menu-alt > li {
+	margin: 1.5rem 0 0 3rem;
+}
+
+.main-menu-alt > li.menu-item-has-children > .link-icon-wrapper {
+	align-items: center;
+	display: flex;
+	white-space: nowrap;
+}
+
+.main-menu-alt .link-icon-wrapper svg {
+	content: "↓";
+	display: block;
+	height: .8rem;
+	margin-left: 1rem;
+	width: 1.3rem;
+}
+
+.main-menu-alt a {
+	color: inherit;
+	display: block;
+	line-height: 1;
+	text-decoration: none;
+}
+
+.main-menu-alt a:hover,
+.main-menu-alt li.current-menu-item > a,
+.main-menu-alt li.current-menu-item > .link-icon-wrapper > a {
+	text-decoration: underline;
+}
+
+/* SUB MENU */
+
+.main-menu-alt ul {
+	background: currentColor;
+	border-radius: .4rem;
+	color: #f1f1f3;
+	font-size: 1.7rem;
+	opacity: 0;
+	padding: 1rem 0;
+	position: absolute;
+		right: 9999rem;
+		top: calc( 100% + 2rem );
+	transition: opacity .15s linear, transform .15s linear, right 0s .15s;
+	transform: translateY( .6rem );
+	width: 26rem;
+	z-index: 1;
+}
+
+.main-menu-alt ul li {
+	color: #1A1B1F;
+}
+
+.main-menu-alt li.menu-item-has-children:hover > ul {
+	right: -2rem;
+	opacity: 1;
+	transform: translateY( 0 );
+	transition: opacity .15s linear, transform .15s linear;
+}
+
+.main-menu-alt ul:before,
+.main-menu-alt ul:after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 100%;
+}
+
+.main-menu-alt ul:before {
+	height: 2rem;
+	left: 0;
+	right: 0;
+}
+
+.main-menu-alt ul:after {
+	border: .8rem solid transparent;
+	border-bottom-color: currentColor;
+	right: 1.8rem;
+}
+
+.main-menu-alt ul li + li {
+	margin-top: 1rem;
+}
+
+.main-menu-alt ul a {
+	background: transparent;
+	border: none;
+	display: block;
+	padding: 1rem 2rem;
+	transition: background-color .15s linear;
+	width: 100%;
+}
+
+.main-menu-alt ul li.menu-item-has-children > .link-icon-wrapper > a {
+	padding-right: 4.5rem;
+}
+
+.main-menu-alt ul li.menu-item-has-children > .link-icon-wrapper svg {
+	position: absolute;
+		right: 2rem;
+		top: 50%;
+	transform: translateY( -50% );
+}
+
+/* DEEP DOWN */
+
+.main-menu-alt ul ul {
+	top: -1rem;
+}
+
+.main-menu-alt ul li.menu-item-has-children:hover > ul {
+	right: calc( 100% + 2rem );
+}
+
+.main-menu-alt ul ul:before {
+	bottom: 0;
+	height: auto;
+	left: auto;
+	right: -2rem;
+	top: 0;
+	width: 2rem;
+}
+
+.main-menu-alt ul ul:after {
+	border-bottom-color: transparent;
+	border-left-color: currentcolor;
+	bottom: auto;
+	right: -1.6rem;
+	top: 2rem;
+}
