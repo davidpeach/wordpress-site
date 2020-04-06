@@ -80,7 +80,7 @@
 
 				<?php
 
-				he_post_thumbnail(get_the_ID());
+				the_post_thumbnail(get_the_ID());
 
 				$caption = get_the_post_thumbnail_caption();
 
