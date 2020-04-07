@@ -1501,3 +1501,60 @@ function bidirectional_acf_update_value( $value, $post_id, $field  ) {
 }
 
 include __DIR__ . '/includes/post-types/tag-category-fields.php';
+
+
+
+function get_archive_content(): array
+{
+	$object = get_queried_object();
+	$term = $object->term_id;
+
+	$args = array(
+	    'post_type' => 'archive_content',
+	    'meta_key'		=> 'taxonomy',
+		'meta_value'	=> $term,
+		'posts_per_page' => 1,
+	);
+
+	$query = new WP_Query($args);
+	$posts = $query->get_posts();
+
+	if (empty($posts)) {
+		return [];
+	}
+
+	$post = $posts[0];
+
+	$blocks = parse_blocks($post->post_content);
+
+	$sortedBlocks = [
+		'before' => [],
+		'after' => [],
+	];
+
+	$currentArea = 'before';
+
+	foreach ($blocks as $block) {
+		if ($block['blockName'] === 'core/separator') {
+			$currentArea = 'after';
+			continue;
+		}
+
+		$sortedBlocks[$currentArea][] = $block;
+	}
+
+	$contentBefore = '';
+	foreach ($sortedBlocks['before'] as $block) {
+		$contentBefore .= render_block($block);
+	}
+
+	$contentAfter = '';
+	foreach ($sortedBlocks['after'] as $block) {
+		$contentAfter .= render_block($block);
+	}
+
+	return [
+		$contentBefore,
+		$contentAfter,
+	];
+}

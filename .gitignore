@@ -1,6 +1,7 @@
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
+!web/app/plugins/archive-gutenberg-content
 web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
