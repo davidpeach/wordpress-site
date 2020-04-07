@@ -50,6 +50,7 @@ class ArchiveGutenbergContent
 		if (empty($posts)) {
 			$this->content = '';
 			$this->done = true;
+			return;
 		}
 
 		$post = $posts[0];
