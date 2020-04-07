@@ -3,6 +3,8 @@
  * Plugin Name: Archive Gutenberg Content
  */
 
+require_once plugin_dir_path( __FILE__ ) . '/PostType.php';
+
 class ArchiveGutenbergContent
 {
 	private static $instance;
@@ -18,6 +20,7 @@ class ArchiveGutenbergContent
 	public static function instance() {
 		if ( ! isset( self::$instance ) && ! ( self::$instance instanceof ArchiveGutenbergContent ) ) {
 			self::$instance = new ArchiveGutenbergContent();
+			self::$instance->setupPostType();
 		}
 		self::$instance->init();
 
@@ -96,6 +99,11 @@ class ArchiveGutenbergContent
 	public function getBottomContent()
 	{
 		return $this->bottomContent;
+	}
+
+	private function setupPostType()
+	{
+		PostType::setup();
 	}
 }
 
