@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd782777ce7d528da4b30b50616d06ac",
+    "content-hash": "c7e1c6e20a8a23cdd0b1351639bee2e6",
     "packages": [
         {
             "name": "composer/installers",
@@ -515,6 +515,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/coblocks/"
+        },
+        {
+            "name": "wpackagist-plugin/getwid",
+            "version": "1.5.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/getwid/",
+                "reference": "tags/1.5.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/getwid.1.5.4.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/getwid/"
         },
         {
             "name": "wpackagist-plugin/gutenberg",
