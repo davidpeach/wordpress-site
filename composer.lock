@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4816fe91fb5b7d14f67e429cb5be1e97",
+    "content-hash": "c7e1c6e20a8a23cdd0b1351639bee2e6",
     "packages": [
         {
             "name": "composer/installers",
@@ -517,6 +517,24 @@
             "homepage": "https://wordpress.org/plugins/coblocks/"
         },
         {
+            "name": "wpackagist-plugin/getwid",
+            "version": "1.5.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/getwid/",
+                "reference": "tags/1.5.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/getwid.1.5.4.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/getwid/"
+        },
+        {
             "name": "wpackagist-plugin/gutenberg",
             "version": "7.8.1",
             "source": {
@@ -587,6 +605,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/twentig",
+            "version": "0.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/twentig/",
+                "reference": "tags/0.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/twentig.0.9.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/twentig/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
