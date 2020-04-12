@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "adcf60287e660120cd8e4f612ace81bf",
+    "content-hash": "36be4556d8925e122cf3d13e6fb62862",
     "packages": [
         {
             "name": "composer/installers",
@@ -587,6 +587,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/jetpack/"
+        },
+        {
+            "name": "wpackagist-plugin/kadence-blocks",
+            "version": "1.7.20",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/kadence-blocks/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/kadence-blocks.zip?timestamp=1585779018"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/kadence-blocks/"
         },
         {
             "name": "wpackagist-plugin/post-type-switcher",
