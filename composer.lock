@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7e1c6e20a8a23cdd0b1351639bee2e6",
+    "content-hash": "adcf60287e660120cd8e4f612ace81bf",
     "packages": [
         {
             "name": "composer/installers",
@@ -515,6 +515,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/coblocks/"
+        },
+        {
+            "name": "wpackagist-plugin/custom-color-palette",
+            "version": "1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/custom-color-palette/",
+                "reference": "tags/1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-color-palette.1.0.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/custom-color-palette/"
         },
         {
             "name": "wpackagist-plugin/getwid",
