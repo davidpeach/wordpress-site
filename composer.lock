@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "652c8b494f5863b2343fc1b23bedd401",
+    "content-hash": "a090bcc004b29d423c2006d19321bb91",
     "packages": [
         {
             "name": "composer/installers",
@@ -677,6 +677,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/twentig/"
+        },
+        {
+            "name": "wpackagist-plugin/ultimate-blocks",
+            "version": "2.3.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ultimate-blocks/",
+                "reference": "tags/2.3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ultimate-blocks.2.3.0.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ultimate-blocks/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
