@@ -54,6 +54,7 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "vlucas/phpdotenv": "^2.2",
     "wpackagist-plugin/advanced-custom-fields": "^5.8",
+    "wpackagist-plugin/advanced-gutenberg": "^2.3",
     "wpackagist-plugin/advanced-gutenberg-blocks": "^1.9",
     "wpackagist-plugin/coblocks": "^1.21",
     "wpackagist-plugin/custom-color-palette": "^1.0",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a527342f11b8bfba0e049eea3382c8d",
+    "content-hash": "26d1492f2a33f62d96229987928b953d",
     "packages": [
         {
             "name": "composer/installers",
@@ -497,6 +497,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
+        },
+        {
+            "name": "wpackagist-plugin/advanced-gutenberg",
+            "version": "2.3.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/advanced-gutenberg/",
+                "reference": "tags/2.3.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-gutenberg.2.3.6.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/advanced-gutenberg/"
         },
         {
             "name": "wpackagist-plugin/advanced-gutenberg-blocks",
