@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a090bcc004b29d423c2006d19321bb91",
+    "content-hash": "8a527342f11b8bfba0e049eea3382c8d",
     "packages": [
         {
             "name": "composer/installers",
@@ -677,6 +677,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/twentig/"
+        },
+        {
+            "name": "wpackagist-plugin/ultimate-addons-for-gutenberg",
+            "version": "1.14.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ultimate-addons-for-gutenberg/",
+                "reference": "tags/1.14.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ultimate-addons-for-gutenberg.1.14.8.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ultimate-addons-for-gutenberg/"
         },
         {
             "name": "wpackagist-plugin/ultimate-blocks",
