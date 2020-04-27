@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26d1492f2a33f62d96229987928b953d",
+    "content-hash": "87e6151d5031c8a585c5d64743f63676",
     "packages": [
         {
             "name": "composer/installers",
@@ -589,6 +589,24 @@
             "homepage": "https://wordpress.org/plugins/getwid/"
         },
         {
+            "name": "wpackagist-plugin/grids",
+            "version": "1.2.22",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/grids/",
+                "reference": "tags/1.2.22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/grids.1.2.22.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/grids/"
+        },
+        {
             "name": "wpackagist-plugin/gutenberg",
             "version": "7.8.1",
             "source": {
@@ -630,11 +648,11 @@
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/kadence-blocks/",
-                "reference": "trunk"
+                "reference": "tags/1.7.20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/kadence-blocks.zip?timestamp=1585779018"
+                "url": "https://downloads.wordpress.org/plugin/kadence-blocks.1.7.20.zip"
             },
             "require": {
                 "composer/installers": "~1.0"

@@ -59,6 +59,7 @@
     "wpackagist-plugin/coblocks": "^1.21",
     "wpackagist-plugin/custom-color-palette": "^1.0",
     "wpackagist-plugin/getwid": "^1.5",
+    "wpackagist-plugin/grids": "^1.2",
     "wpackagist-plugin/gutenberg": "^7.5",
     "wpackagist-plugin/jetpack": "^8.1",
     "wpackagist-plugin/kadence-blocks": "^1.7",
