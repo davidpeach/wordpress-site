@@ -43,7 +43,11 @@
               "composer/installers": "^1.0"
           }
       }
-  }
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/davidpeach/tsukiko-theme"
+    }
   ],
   "require": {
     "php": ">=7.1",
@@ -68,7 +72,8 @@
     "wpackagist-plugin/twentig": "^0.9.0",
     "wpackagist-plugin/ultimate-addons-for-gutenberg": "^1.14",
     "wpackagist-plugin/ultimate-blocks": "^2.3",
-    "wpackagist-plugin/wordpress-seo": "^13.0"
+    "wpackagist-plugin/wordpress-seo": "^13.0",
+    "davidpeach/tsukiko-theme": "dev-master"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
