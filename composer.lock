@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c15a051ada86a9e00ecc53ba9cd80e12",
+    "content-hash": "36112ec6af260968374d75b67aabc541",
     "packages": [
         {
             "name": "composer/installers",
@@ -602,6 +602,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/custom-color-palette/"
+        },
+        {
+            "name": "wpackagist-plugin/do-spaces-sync",
+            "version": "2.2.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/do-spaces-sync/",
+                "reference": "tags/2.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/do-spaces-sync.2.2.1.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/do-spaces-sync/"
         },
         {
             "name": "wpackagist-plugin/getwid",
