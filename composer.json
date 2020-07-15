@@ -61,6 +61,7 @@
     "wpackagist-plugin/advanced-custom-fields": "^5.8",
     "wpackagist-plugin/coblocks": "^2.0",
     "wpackagist-plugin/do-spaces-sync": "^2.2",
+    "wpackagist-plugin/getwid": "^1.6",
     "wpackagist-plugin/gutenberg": "^8.5",
     "wpackagist-plugin/post-type-switcher": "^3.2",
     "wpackagist-plugin/regenerate-thumbnails": "^3.1",

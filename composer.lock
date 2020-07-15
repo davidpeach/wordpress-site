@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a9c3fdf5ab606834e2bbe5bb249484b",
+    "content-hash": "ed7fb7ed8b403befc6b6e75e0953eae6",
     "packages": [
         {
             "name": "composer/installers",
@@ -609,6 +609,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/do-spaces-sync/"
+        },
+        {
+            "name": "wpackagist-plugin/getwid",
+            "version": "1.6.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/getwid/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/getwid.zip?timestamp=1594413102"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/getwid/"
         },
         {
             "name": "wpackagist-plugin/gutenberg",
