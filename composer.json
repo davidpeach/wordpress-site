@@ -63,6 +63,7 @@
     "wpackagist-plugin/do-spaces-sync": "^2.2",
     "wpackagist-plugin/getwid": "^1.6",
     "wpackagist-plugin/gutenberg": "^8.5",
+    "wpackagist-plugin/hummingbird-performance": "^2.4",
     "wpackagist-plugin/post-type-switcher": "^3.2",
     "wpackagist-plugin/regenerate-thumbnails": "^3.1",
     "wpackagist-plugin/twentig": "^1.0",
