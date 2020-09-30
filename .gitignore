@@ -8,7 +8,7 @@ web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/themes/shiver/node_modules
-web/app/themes/
+web/app/themes/*
 !web/app/themes/valentine/
 !web/app/themes/.gitkeep
 web/app/db.php
