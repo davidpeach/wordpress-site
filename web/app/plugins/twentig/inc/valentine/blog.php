@@ -23,7 +23,7 @@ add_filter( 'excerpt_more', 'twentig_excerpt_more' );
  */
 function twentig_add_more_to_excerpt( $post_excerpt, $post ) {
 	if ( 'summary' === get_theme_mod( 'blog_content', 'full' ) && get_theme_mod( 'twentig_blog_excerpt_more', false ) && 'post' === $post->post_type && ! is_singular() && ! is_search() ) {
-		return $post_excerpt . '<a href="' . get_permalink( $post->ID ) . '" class="more-link"><span>' . __( 'Continue reading', 'twentytwenty' ) . '</span><span class="screen-reader-text">' . $post->post_title . '</span></a>';
+		return $post_excerpt . '<a href="' . get_permalink( $post->ID ) . '" class="more-link"><span>' . __( 'Continue reading', 'valentine' ) . '</span><span class="screen-reader-text">' . $post->post_title . '</span></a>';
 	}
 	return $post_excerpt;
 }
@@ -89,7 +89,7 @@ function twentig_hide_categories_in_entry_header() {
 	}
 	return true;
 }
-add_filter( 'twentytwenty_show_categories_in_entry_header', 'twentig_hide_categories_in_entry_header' );
+add_filter( 'valentine_show_categories_in_entry_header', 'twentig_hide_categories_in_entry_header' );
 
 /**
  * Display the post top meta.
@@ -114,7 +114,7 @@ function twentig_post_meta_top( $meta ) {
 
 	return $post_meta;
 }
-add_filter( 'twentytwenty_post_meta_location_single_top', 'twentig_post_meta_top' );
+add_filter( 'valentine_post_meta_location_single_top', 'twentig_post_meta_top' );
 
 /**
  * Display the post bottom meta.
@@ -136,7 +136,7 @@ function twentig_post_meta_bottom( $meta ) {
 
 	return $meta;
 }
-add_filter( 'twentytwenty_post_meta_location_single_bottom', 'twentig_post_meta_bottom' );
+add_filter( 'valentine_post_meta_location_single_bottom', 'twentig_post_meta_bottom' );
 
 /**
  * Adds custom classes to the array of post classes.
@@ -320,7 +320,7 @@ function twentig_post_nav_background() {
 			$css       .= 'a.next-post { background-image: url(' . esc_url( $next_thumb[0] ) . '); }';
 		}
 
-		wp_add_inline_style( 'twentig-twentytwenty', $css );
+		wp_add_inline_style( 'twentig-valentine', $css );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'twentig_post_nav_background', 13 );

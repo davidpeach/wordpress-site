@@ -12,9 +12,9 @@
 	} );
 
 	api.controlConstructor['checkbox-multiple'] = api.Control.extend( {
-		ready: function() {	
+		ready: function() {
 			var control = this,
-				container = this.container;	
+				container = this.container;
 
 			container.on( 'change', 'input[type="checkbox"]', function() {
 				var values = container.find( 'input[type="checkbox"]:checked' ).map( function() {
@@ -40,7 +40,7 @@
 			'accent_hue_active'	: {
 				controls: [ 'twentig_accent_hex_color' ],
 				callback: function( to ) { return 'hex' === to; }
-			},	
+			},
 			'twentig_cover_page_height': {
 				controls: [ 'twentig_cover_page_scroll_indicator' ],
 				callback: function( to ) { return '' === to; }
@@ -48,7 +48,7 @@
 			'twentig_footer_credit': {
 				controls: [ 'twentig_footer_credit_text' ],
 				callback: function( to ) { return 'custom' === to; }
-			},			
+			},
 			'twentig_blog_layout': {
 				controls: [ 'twentig_blog_columns' ],
 				callback: function( to ) { return ( 'grid-basic' === to || 'grid-card' === to ); }
@@ -83,32 +83,32 @@
 			});
 		});
 
-		api( 'custom_logo', function( setting ) {			
+		api( 'custom_logo', function( setting ) {
 			var onChange = function( logo ) {
 				api.control( 'twentig_fonts_section_title_logo', function( control ) {
-					control.container.find( '.description' ).toggle( !! logo );				
-				});	
+					control.container.find( '.description' ).toggle( !! logo );
+				});
 				$.each( [ 'twentig_custom_logo_transparent', 'twentig_logo_mobile_width' ], function( i, controlId ) {
 					api.control( controlId, function( control ) {
-						control.container.toggle( !! logo );				
-					});					
+						control.container.toggle( !! logo );
+					});
 				});
 				$.each( [ 'twentig_logo_font', 'twentig_logo_font_weight', 'twentig_logo_font_size', 'twentig_logo_mobile_font_size', 'twentig_logo_letter_spacing', 'twentig_logo_text_transform' ], function( i, controlId ) {
 					api.control( controlId, function( control ) {
-						control.container.toggle( '' === logo );				
-					});					
+						control.container.toggle( '' === logo );
+					});
 				});
 				$.each( [ 'twentig_logo_font_custom', 'twentig_logo_font_fallback' ], function( i, controlId ) {
 					api.control( controlId, function( control ) {
-						control.container.toggle( '' === logo && 'custom-google-font' === api( 'twentig_logo_font' ).get() );				
-					});					
+						control.container.toggle( '' === logo && 'custom-google-font' === api( 'twentig_logo_font' ).get() );
+					});
 				});
-			};	
+			};
 			onChange( setting.get() );
 			setting.bind( onChange );
 		} );
 
-		api( 'blog_content', function( setting ) {			
+		api( 'blog_content', function( setting ) {
 			var onChange = function( to ) {
 				var blog_show_content = api( 'twentig_blog_content' ).get();
 				if ( 'summary' === to && blog_show_content ) {
@@ -118,12 +118,12 @@
 					api.control( 'twentig_blog_excerpt_length' ).container.hide();
 					api.control( 'twentig_blog_excerpt_more' ).container.hide();
 				}
-			};	
+			};
 			onChange( setting.get() );
 			setting.bind( onChange );
 		} );
 
-		api( 'twentig_blog_content', function( setting ) {			
+		api( 'twentig_blog_content', function( setting ) {
 			var onChange = function( to ) {
 				var blog_content = api( 'blog_content' ).get();
 				if ( 'summary' === blog_content && to ) {
@@ -133,7 +133,7 @@
 					api.control( 'twentig_blog_excerpt_length' ).container.hide();
 					api.control( 'twentig_blog_excerpt_more' ).container.hide();
 				}
-			};	
+			};
 			onChange( setting.get() );
 			setting.bind( onChange );
 		} );
@@ -149,14 +149,14 @@
 
 				var menu_font = api( 'twentig_menu_font' ).get();
 				if ( 'heading' === menu_font ) {
-					updateControlFontWeights( 'twentig_menu_font_weight', font );					
+					updateControlFontWeights( 'twentig_menu_font_weight', font );
 				}
-			
+
 				var logo_font = api( 'twentig_logo_font' ).get();
 				if ( '' === logo_font ) {
-					updateControlFontWeights( 'twentig_logo_font_weight', font );					
+					updateControlFontWeights( 'twentig_logo_font_weight', font );
 				}
-			};	
+			};
 			onChange( setting.get() );
 			setting.bind( onChange );
 		} );
@@ -165,21 +165,21 @@
 			var onChange = function( font ) {
 
 				if ( '' === font || 'custom-google-font' === font ) {
-					api.previewer.refresh(); 
+					api.previewer.refresh();
 				}
 
 				var menu_font = api( 'twentig_menu_font' ).get();
 				if ( 'body' === menu_font ) {
-					updateControlFontWeights( 'twentig_menu_font_weight', font );					
+					updateControlFontWeights( 'twentig_menu_font_weight', font );
 				}
-			};	
+			};
 			onChange( setting.get() );
 			setting.bind( onChange );
 		} );
-	
+
 		api( 'twentig_logo_font', function( setting ) {
 			var onChange = function( font ) {
-				if ( '' ===  font ) {		
+				if ( '' ===  font ) {
 					updateControlFontWeights( 'twentig_logo_font_weight', api( 'twentig_heading_font' ).get() );
 					api.previewer.refresh();
 				} else if ( 'custom-google-font' === font ) {
@@ -187,19 +187,19 @@
 					api.previewer.refresh();
 				} else {
 					updateControlFontWeights( 'twentig_logo_font_weight', font );
-				}				
-			};	
+				}
+			};
 			onChange( setting.get() );
 			setting.bind( onChange );
-		} );				
+		} );
 
 		api( 'twentig_menu_font', function( setting ) {
 			var onChange = function( font ) {
 				updateControlFontWeights( 'twentig_menu_font_weight', font );
 				if ( 'custom-google-font' === api( 'twentig_body_font' ).get() || 'custom-google-font' === api( 'twentig_heading_font' ).get() ) {
-					api.previewer.refresh(); 
+					api.previewer.refresh();
 				}
-			};	
+			};
 			onChange( setting.get() );
 			setting.bind( onChange );
 		} );
@@ -207,9 +207,9 @@
 		api( 'twentig_heading_font_weight', function( setting ) {
 			var onChange = function( value ) {
 				if ( 'custom-google-font' === api( 'twentig_heading_font' ).get() ) {
-					api.previewer.refresh(); 
+					api.previewer.refresh();
 				}
-			};	
+			};
 			setting.bind( onChange );
 		} );
 
@@ -217,7 +217,7 @@
 			api( setting_name, function( setting ) {
 				var onChange = function( value) {
 					if ( 'custom-google-font' === api( 'twentig_body_font' ).get() || 'custom-google-font' === api( 'twentig_heading_font' ).get() ) {
-						api.previewer.refresh(); 
+						api.previewer.refresh();
 					}
 				};
 				setting.bind( onChange );
@@ -227,9 +227,9 @@
 		api( 'custom_logo', function( setting ) {
 			var onChange = function( value ) {
 				if ( '' === value && 'custom-google-font' === api( 'twentig_logo_font' ).get() ) {
-					api.previewer.refresh(); 
+					api.previewer.refresh();
 				}
-			};	
+			};
 			setting.bind( onChange );
 		} );
 
@@ -237,7 +237,7 @@
 			api( setting_name, function( setting ) {
 				var onChange = function( value ) {
 					if ( 'custom-google-font' === api( 'twentig_logo_font' ).get() ) {
-						api.previewer.refresh(); 
+						api.previewer.refresh();
 					}
 				};
 				setting.bind( onChange );
@@ -246,10 +246,10 @@
 
 		api( 'twentig_logo_font_size', function( setting ) {
 			var onChange = function( size ) {
-				if ( size === '' ) {					
-					api.previewer.refresh(); 
+				if ( size === '' ) {
+					api.previewer.refresh();
 				}
-			};	
+			};
 			setting.bind( onChange );
 		} );
 
@@ -263,33 +263,33 @@
 			var onChange = function( to ) {
 				var backgroundColor = Color( to );
 				var textColor = backgroundColor.getMaxContrastColor();
-			
+
 				var lightenColor = Color( to ).lighten(5);
 				var darkenColor = Color( to ).darken(5);
 				var newColor;
-			
+
 				if ( textColor == '#ffffff' ) {
 					var contrastWithLight = textColor.getDistanceLuminosityFrom( lightenColor );
 					newColor = contrastWithLight >= 4.5 ? lightenColor : darkenColor;
 				} else {
 					var contrastWithDark = textColor.getDistanceLuminosityFrom( darkenColor );
 					newColor = contrastWithDark >= 4.5 ? darkenColor : lightenColor;
-				}	
+				}
 
 				if ( '#000000' == to ) {
-					newColor = backgroundColor.lighten(7);			
-				}			
-				
+					newColor = backgroundColor.lighten(7);
+				}
+
 				wp.customize( 'twentig_subtle_background_color' ).set( newColor.toCSS() );
 
-			};	
+			};
 			onChange( setting.get() );
 			setting.bind( onChange );
 		} );
 
 		// Live fonts: tells the Customizer previewer to update the CSS
  		var cssTemplate = wp.template( 'twentig-customizer-live-style' );
-		var live_settings = [ 
+		var live_settings = [
 			'twentig_body_font',
 			'twentig_body_font_custom',
 			'twentig_heading_font',
@@ -308,26 +308,26 @@
 
 		// Update the CSS whenever a live setting is changed.
 		_.each( live_settings, function( set ) {
-			api( set, function( setting ) {		
-				setting.bind( function( to ) {				
-					updateCSS();	
+			api( set, function( setting ) {
+				setting.bind( function( to ) {
+					updateCSS();
 				});
 			});
 		});
-		
+
 		// Generate the CSS for the current live settings.
-		function updateCSS() {	
-			var css,		
-				styles = _.object( );	
-			_.each( live_settings, function( setting ) {	
+		function updateCSS() {
+			var css,
+				styles = _.object( );
+			_.each( live_settings, function( setting ) {
 				styles[ setting ] = api( setting ) !== undefined ? api( setting )() : '';
-			});	
+			});
 			css = cssTemplate( styles );
 			css = _.unescape(css);
-			css = css.replace(/\s{2,}/g, ' ' );	
+			css = css.replace(/\s{2,}/g, ' ' );
 			api.previewer.send( 'update-customizer-live-css', css );
 		}
-	
+
 		var twentigBgColors = twentigCustomizerSettings['colorVars'];
 
 		// Add a listener for accent-color changes.
@@ -358,7 +358,7 @@
 			// Handle the font presets panel.
 		$( '.twentig-preset-panel-toggle' ).on( 'click', function( event ) {
 			$( this ).parents( '.twentig-preset-panel' ).toggleClass( 'is-open' );
-			$( this ).attr( 'aria-expanded', 'true' === $(this).attr( 'aria-expanded' ) ? 'false' : 'true' );			
+			$( this ).attr( 'aria-expanded', 'true' === $(this).attr( 'aria-expanded' ) ? 'false' : 'true' );
 			event.preventDefault();
 		});
 
@@ -366,15 +366,15 @@
 	 		if ( 'keydown' === event.type && ( event.keyCode !== 13 && event.keyCode !== 32 ) ) {
 	 			return;
 	 		}
-	 		var presetName = $( this ).attr( 'data-value' );	
+	 		var presetName = $( this ).attr( 'data-value' );
 	 		var preset = _.find( twentigCustomizerSettings.fontPresets, function( preset ) { return preset.name === presetName; } );
-	 		if ( preset ) {	
+	 		if ( preset ) {
 				$.each( preset.mods, function( settingId, value ) {
 					api( settingId, function( setting ) {
-						setting.set( value );						
-					});			
-				});	
-			}			
+						setting.set( value );
+					});
+				});
+			}
 	 	});
 
 	});
@@ -386,7 +386,7 @@
 			selectedFont = api( 'twentig_heading_font' ).get();
 		} else if ( 'body' === fontFamily ) {
 			selectedFont = api( 'twentig_body_font' ).get();
-		} 
+		}
 
 		var weightOpt = '';
 		$.each( [ '400', '500', '600', '700', '800', '900' ], function( key, value) {
@@ -394,12 +394,12 @@
 		});
 
 		if ( selectedFont && 'sans-serif' !== selectedFont && 'custom-google-font' !== selectedFont ) {
-			weightOpt = '';	
+			weightOpt = '';
 			var fontObj = _.find( twentigCustomizerSettings.fonts, function( font ) { return font.family === selectedFont; } );
 			if ( ! $.isEmptyObject( fontObj ) && ! _.isUndefined( fontObj.variants ) ) {
 				$.each( fontObj.variants, function( key, value ) {
 					weightOpt += '<option value="' + value + '">' + twentigCustomizerSettings.fontVariants[ value ] + '</option>';
-				});									
+				});
 			}
 		}
 
@@ -407,7 +407,7 @@
 			var value = control.setting.get();
 			control.container.find( 'select' ).empty().append( weightOpt ).find( 'option[value="' + value + '"]' ).prop( 'selected', true );
 			control.setting.set( control.container.find( 'select' ).val() );
-		});	
+		});
 	}
 
 	//Updates the value of the "accent_accessible_colors" setting.
@@ -417,10 +417,10 @@
 		value = wp.customize( 'twentig_accessible_colors' ).get();
 		value = ( _.isObject( value ) && ! _.isArray( value ) ) ? value : {};
 
-		colors = twentyTwentyColor( backgroundColor, accentHue );
+		colors = valentineColor( backgroundColor, accentHue );
 
 		if ( colors.getAccentColor() && 'function' === typeof colors.getAccentColor().toCSS ) {
-			
+
 			value[ context ] = {
 				text: colors.getTextColor(),
 				accent: colors.getAccentColor().toCSS(),
@@ -440,7 +440,7 @@
 		}
 
 		// Important to trigger change.
-		wp.customize( 'twentig_accessible_colors' ).set( '' );		
+		wp.customize( 'twentig_accessible_colors' ).set( '' );
 		wp.customize( 'twentig_accessible_colors' ).set( value );
 		// Small hack to save the option.
 		wp.customize( 'twentig_accessible_colors' )._dirty = true;

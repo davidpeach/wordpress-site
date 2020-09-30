@@ -44,7 +44,7 @@ add_action( 'admin_menu', 'twentig_menu_page' );
  * Renders Twentig dashboard page.
  */
 function twentig_render_menu_page() {
-	?>		
+	?>
 	<div class="wrap tw-about__container">
 		<div class="tw-about__header">
 			<nav class="tw-about__header-navigation" aria-label="<?php esc_attr_e( 'Primary menu' ); ?>">
@@ -66,15 +66,15 @@ function twentig_render_menu_page() {
 				<p><?php esc_html_e( 'Twentig offers powerful features to customize Twenty Twenty — making it the perfect combination to build your website.', 'twentig' ); ?> </p>
 				<p>
 				<?php
-				if ( 'twentytwenty' !== get_template() && current_user_can( 'switch_themes' ) ) {
+				if ( 'valentine' !== get_template() && current_user_can( 'switch_themes' ) ) {
 					$installed_themes = search_theme_directories();
-					if ( in_array( 'twentytwenty', array_keys( $installed_themes ), true ) ) {
-						$install_url = wp_nonce_url( admin_url( 'themes.php?action=activate&amp;stylesheet=twentytwenty' ), 'switch-theme_twentytwenty' );
+					if ( in_array( 'valentine', array_keys( $installed_themes ), true ) ) {
+						$install_url = wp_nonce_url( admin_url( 'themes.php?action=activate&amp;stylesheet=valentine' ), 'switch-theme_valentine' );
 						?>
 						<?php printf( '<a href="%s" class="button button-primary">%s</a>', esc_url( $install_url ), esc_html__( 'Activate Twenty Twenty', 'twentig' ) ); ?>
 						<?php
 					} else {
-						$install_url = admin_url( 'theme-install.php?search=twentytwenty' );
+						$install_url = admin_url( 'theme-install.php?search=valentine' );
 						?>
 						<?php printf( '<a href="%s" class="button button-primary">%s</a>', esc_url( $install_url ), esc_html__( 'Install Twenty Twenty', 'twentig' ) ); ?>
 						<?php
@@ -91,10 +91,10 @@ function twentig_render_menu_page() {
 						<h3><?php esc_html_e( 'Advanced customization options', 'twentig' ); ?></h3>
 						<p>
 							<?php esc_html_e( 'From blog grids to sticky header to footer layout, Twentig provides endless ways to enhance Twenty Twenty. Change the look and feel of your website by customizing the fonts, colors, global styles, 404 page, and more.', 'twentig' ); ?>
-							<?php if ( 'twentytwenty' === get_template() ) : ?>
+							<?php if ( 'valentine' === get_template() ) : ?>
 								<a href="<?php echo esc_url( admin_url( 'customize.php' ) . '?return=' . rawurlencode( admin_url() . '?page=twentig' ) ); ?>"><?php esc_html_e( 'Start customizing', 'twentig' ); ?></a>.
 							<?php endif; ?>
-						</p>						
+						</p>
 					</div>
 					<div class="column">
 						<h3><?php esc_html_e( 'Design freedom', 'twentig' ); ?></h3>
@@ -103,7 +103,7 @@ function twentig_render_menu_page() {
 					<div class="column">
 						<h3><?php esc_html_e( 'Tailored design', 'twentig' ); ?></h3>
 						<p><?php esc_html_e( 'Twentig brings design improvements to the Twenty Twenty theme. Our additional block settings and pre-designed layouts are built specifically for Twenty Twenty — so it’s easier than ever to make beautiful pages.', 'twentig' ); ?></p>
-					</div>					
+					</div>
 				</div>
 			</div>
 		</div>
@@ -138,7 +138,7 @@ function twentig_render_menu_page() {
 
 				<div class="tw-about__image">
 					<img src="https://blocks.static-twentig.com/overview-patterns.png" loading="lazy" width="1280" height="800" alt="">
-				</div>	
+				</div>
 
 				<div class="tw-about__columns has-2-columns">
 					<div class="column">
@@ -200,7 +200,7 @@ function twentig_render_menu_page() {
  */
 function twentig_render_settings_page() {
 	?>
-	<div class="wrap">	
+	<div class="wrap">
 		<h1><?php esc_html_e( 'Twentig Settings', 'twentig' ); ?></h1>
 		<?php settings_errors(); ?>
 		<form method="post" action="options.php">

@@ -16,12 +16,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function twentig_register_control_types( $wp_customize ) {
-	require_once TWENTIG_PATH . 'inc/twentytwenty/customizer/class-twentig-customize-checkbox-multiple-control.php';
-	require_once TWENTIG_PATH . 'inc/twentytwenty/customizer/class-twentig-customize-select-optgroup-control.php';
-	require_once TWENTIG_PATH . 'inc/twentytwenty/customizer/class-twentig-customize-dropdown-pages-private-control.php';
-	require_once TWENTIG_PATH . 'inc/twentytwenty/customizer/class-twentig-customize-font-presets-control.php';
-	require_once TWENTIG_PATH . 'inc/twentytwenty/customizer/class-twentig-customize-title-control.php';
-	require_once TWENTIG_PATH . 'inc/twentytwenty/customizer/class-twentig-customize-more-section.php';
+	require_once TWENTIG_PATH . 'inc/valentine/customizer/class-twentig-customize-checkbox-multiple-control.php';
+	require_once TWENTIG_PATH . 'inc/valentine/customizer/class-twentig-customize-select-optgroup-control.php';
+	require_once TWENTIG_PATH . 'inc/valentine/customizer/class-twentig-customize-dropdown-pages-private-control.php';
+	require_once TWENTIG_PATH . 'inc/valentine/customizer/class-twentig-customize-font-presets-control.php';
+	require_once TWENTIG_PATH . 'inc/valentine/customizer/class-twentig-customize-title-control.php';
+	require_once TWENTIG_PATH . 'inc/valentine/customizer/class-twentig-customize-more-section.php';
 	$wp_customize->register_section_type( 'Twentig_Customize_Title_Control' );
 	$wp_customize->register_section_type( 'Twentig_Customize_More_Section' );
 }
@@ -33,10 +33,10 @@ add_action( 'customize_register', 'twentig_register_control_types' );
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function twentig_twentytwenty_customize_register( $wp_customize ) {
+function twentig_valentine_customize_register( $wp_customize ) {
 
 	// Prevent options from displaying when previewing another theme in the Customizer.
-	if ( 'twentytwenty' !== get_template() ) {
+	if ( 'valentine' !== get_template() ) {
 		return;
 	}
 
@@ -202,7 +202,7 @@ function twentig_twentytwenty_customize_register( $wp_customize ) {
 			$wp_customize,
 			'twentig_footer_background_color',
 			array(
-				'label'       => __( 'Footer Background Color', 'twentytwenty' ),
+				'label'       => __( 'Footer Background Color', 'valentine' ),
 				'description' => __( 'Apply a custom color to the footer.', 'twentig' ),
 				'section'     => 'colors',
 				'priority'    => 22,
@@ -324,7 +324,7 @@ function twentig_twentytwenty_customize_register( $wp_customize ) {
 	 */
 
 	$wp_customize->add_panel(
-		'twentig_twentytwenty_panel',
+		'twentig_valentine_panel',
 		array(
 			'title'    => __( 'Twentig Theme Options', 'twentig' ),
 			'priority' => 150,
@@ -339,7 +339,7 @@ function twentig_twentytwenty_customize_register( $wp_customize ) {
 		'twentig_layout_section',
 		array(
 			'title'    => __( 'Site Layout', 'twentig' ),
-			'panel'    => 'twentig_twentytwenty_panel',
+			'panel'    => 'twentig_valentine_panel',
 			'priority' => 1,
 		)
 	);
@@ -375,7 +375,7 @@ function twentig_twentytwenty_customize_register( $wp_customize ) {
 		'twentig_fonts_section',
 		array(
 			'title'    => __( 'Fonts', 'twentig' ),
-			'panel'    => 'twentig_twentytwenty_panel',
+			'panel'    => 'twentig_valentine_panel',
 			'priority' => 5,
 		)
 	);
@@ -1040,7 +1040,7 @@ function twentig_twentytwenty_customize_register( $wp_customize ) {
 		'twentig_header_section',
 		array(
 			'title'    => __( 'Header', 'twentig' ),
-			'panel'    => 'twentig_twentytwenty_panel',
+			'panel'    => 'twentig_valentine_panel',
 			'priority' => 10,
 		)
 	);
@@ -1298,7 +1298,7 @@ function twentig_twentytwenty_customize_register( $wp_customize ) {
 		'twentig_footer_section',
 		array(
 			'title'    => __( 'Footer', 'twentig' ),
-			'panel'    => 'twentig_twentytwenty_panel',
+			'panel'    => 'twentig_valentine_panel',
 			'priority' => 15,
 		)
 	);
@@ -1518,7 +1518,7 @@ function twentig_twentytwenty_customize_register( $wp_customize ) {
 		'twentig_page_section',
 		array(
 			'title'    => _x( 'Page', 'Customizer Section Title', 'twentig' ),
-			'panel'    => 'twentig_twentytwenty_panel',
+			'panel'    => 'twentig_valentine_panel',
 			'priority' => 20,
 		)
 	);
@@ -1624,7 +1624,7 @@ function twentig_twentytwenty_customize_register( $wp_customize ) {
 		'twentig_blog_section',
 		array(
 			'title'    => __( 'Blog', 'twentig' ),
-			'panel'    => 'twentig_twentytwenty_panel',
+			'panel'    => 'twentig_valentine_panel',
 			'priority' => 25,
 		)
 	);
@@ -1977,7 +1977,7 @@ function twentig_twentytwenty_customize_register( $wp_customize ) {
 		'twentig_additional_section',
 		array(
 			'title'    => __( 'Additional Settings', 'twentig' ),
-			'panel'    => 'twentig_twentytwenty_panel',
+			'panel'    => 'twentig_valentine_panel',
 			'priority' => 40,
 		)
 	);
@@ -2145,7 +2145,7 @@ function twentig_twentytwenty_customize_register( $wp_customize ) {
 			'twentig_more',
 			array(
 				'title'       => esc_html__( 'Get More — for Free.', 'twentig' ),
-				'panel'       => 'twentig_twentytwenty_panel',
+				'panel'       => 'twentig_valentine_panel',
 				'button_text' => esc_html__( 'Subscribe Now', 'twentig' ),
 				'button_url'  => 'https://twentig.com/newsletter',
 				'priority'    => 50,
@@ -2153,7 +2153,7 @@ function twentig_twentytwenty_customize_register( $wp_customize ) {
 		)
 	);
 }
-add_action( 'customize_register', 'twentig_twentytwenty_customize_register', 11 );
+add_action( 'customize_register', 'twentig_valentine_customize_register', 11 );
 
 /**
  * Sanitize select.
@@ -2279,25 +2279,25 @@ function twentig_sanitize_credit( $content ) {
 /**
  * Enqueue scripts for customizer preview.
  */
-function twentig_twentytwenty_customize_preview_init() {
-	wp_enqueue_script( 'twentig-twentytwenty-customize-preview', TWENTIG_ASSETS_URI . '/js/twentytwenty-customize-preview.js', array( 'customize-preview' ), TWENTIG_VERSION, true );
+function twentig_valentine_customize_preview_init() {
+	wp_enqueue_script( 'twentig-valentine-customize-preview', TWENTIG_ASSETS_URI . '/js/valentine-customize-preview.js', array( 'customize-preview' ), TWENTIG_VERSION, true );
 }
-add_action( 'customize_preview_init', 'twentig_twentytwenty_customize_preview_init', 11 );
+add_action( 'customize_preview_init', 'twentig_valentine_customize_preview_init', 11 );
 
 /**
  * Enqueue scripts for customizer controls.
  */
-function twentig_twentytwenty_customize_controls_enqueue_scripts() {
+function twentig_valentine_customize_controls_enqueue_scripts() {
 	wp_enqueue_script(
-		'twentig-twentytwenty-customize-controls',
-		TWENTIG_ASSETS_URI . '/js/twentytwenty-customize-controls.js',
+		'twentig-valentine-customize-controls',
+		TWENTIG_ASSETS_URI . '/js/valentine-customize-controls.js',
 		array(),
 		TWENTIG_VERSION,
 		true
 	);
 
 	wp_localize_script(
-		'twentig-twentytwenty-customize-controls',
+		'twentig-valentine-customize-controls',
 		'twentigCustomizerSettings',
 		array(
 			'colorVars'    => array(
@@ -2310,13 +2310,13 @@ function twentig_twentytwenty_customize_controls_enqueue_scripts() {
 	);
 
 	wp_enqueue_style(
-		'twentig-twentytwenty-customize-controls',
-		TWENTIG_ASSETS_URI . '/css/twentytwenty-customize-controls.css',
+		'twentig-valentine-customize-controls',
+		TWENTIG_ASSETS_URI . '/css/valentine-customize-controls.css',
 		array(),
 		TWENTIG_VERSION
 	);
 }
-add_action( 'customize_controls_enqueue_scripts', 'twentig_twentytwenty_customize_controls_enqueue_scripts', 11 );
+add_action( 'customize_controls_enqueue_scripts', 'twentig_valentine_customize_controls_enqueue_scripts', 11 );
 
 /**
  * Enqueue specific stylesheets for Twenty Twenty.
@@ -2326,14 +2326,14 @@ function twentig_theme_styles() {
 	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 	wp_enqueue_style(
-		'twentig-twentytwenty',
-		TWENTIG_ASSETS_URI . "/css/twentytwenty{$min}.css",
+		'twentig-valentine',
+		TWENTIG_ASSETS_URI . "/css/valentine{$min}.css",
 		array(),
 		TWENTIG_VERSION
 	);
 
-	wp_style_add_data( 'twentig-twentytwenty', 'rtl', 'replace' );
-	wp_style_add_data( 'twentig-twentytwenty', 'suffix', $min );
+	wp_style_add_data( 'twentig-valentine', 'rtl', 'replace' );
+	wp_style_add_data( 'twentig-valentine', 'suffix', $min );
 
 	wp_enqueue_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		'twentig-theme-fonts',
@@ -2373,7 +2373,7 @@ function twentig_theme_scripts() {
 		return;
 	}
 
-	wp_enqueue_script( 'twentig-twentytwenty', TWENTIG_ASSETS_URI . '/js/twentig-twentytwenty.js', array(), '1.0' );
+	wp_enqueue_script( 'twentig-valentine', TWENTIG_ASSETS_URI . '/js/twentig-valentine.js', array(), '1.0' );
 }
 add_action( 'wp_enqueue_scripts', 'twentig_theme_scripts', 12 );
 
@@ -2400,7 +2400,7 @@ add_filter( 'wp_resource_hints', 'twentig_resource_hints', 10, 2 );
  *
  * @param array $classes Classes added to the body tag.
  */
-function twentig_twentytwenty_body_class( $classes ) {
+function twentig_valentine_body_class( $classes ) {
 
 	$header_layout     = get_theme_mod( 'twentig_header_layout' );
 	$header_decoration = get_theme_mod( 'twentig_header_decoration' );
@@ -2626,13 +2626,13 @@ function twentig_twentytwenty_body_class( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'twentig_twentytwenty_body_class', 11 );
+add_filter( 'body_class', 'twentig_valentine_body_class', 11 );
 
 
 /**
  * Display custom CSS generated by the Customizer settings.
  */
-function twentig_twentytwenty_print_customizer_css() {
+function twentig_valentine_print_customizer_css() {
 	$css = '';
 
 	$body_font           = get_theme_mod( 'twentig_body_font' );
@@ -2803,8 +2803,8 @@ function twentig_twentytwenty_print_customizer_css() {
 
 	$menu_font_weight = get_theme_mod( 'twentig_menu_font_weight', 500 );
 	$menu_transform   = get_theme_mod( 'twentig_menu_text_transform' );
-	$menu_accent      = sanitize_hex_color( twentytwenty_get_color_for_area( 'header-footer', 'accent' ) );
-	$menu_secondary   = sanitize_hex_color( twentytwenty_get_color_for_area( 'header-footer', 'secondary' ) );
+	$menu_accent      = sanitize_hex_color( valentine_get_color_for_area( 'header-footer', 'accent' ) );
+	$menu_secondary   = sanitize_hex_color( valentine_get_color_for_area( 'header-footer', 'secondary' ) );
 	$menu_color       = get_theme_mod( 'twentig_menu_color', 'accent' );
 	$menu_hover       = get_theme_mod( 'twentig_menu_hover', 'underline' );
 	$header_sticky    = get_theme_mod( 'twentig_header_sticky' );
@@ -2849,7 +2849,7 @@ function twentig_twentytwenty_print_customizer_css() {
 	if ( 'text' === $menu_color ) {
 		$css .= 'body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .modal-menu > li > .ancestor-wrapper > a { color: inherit; }';
 	} elseif ( 'secondary' === $menu_color ) {
-		$menu_secondary = sanitize_hex_color( twentytwenty_get_color_for_area( 'header-footer', 'secondary' ) );
+		$menu_secondary = sanitize_hex_color( valentine_get_color_for_area( 'header-footer', 'secondary' ) );
 		$css           .= 'body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .modal-menu > li > .ancestor-wrapper > a { color: ' . $menu_secondary . '; }';
 	}
 
@@ -2895,7 +2895,7 @@ function twentig_twentytwenty_print_customizer_css() {
 	} else {
 		$footer_link_color = get_theme_mod( 'twentig_footer_link_color' );
 		if ( 'text' === $footer_link_color || 'secondary' === $footer_link_color ) {
-			$footer_link_color_value = sanitize_hex_color( twentytwenty_get_color_for_area( 'header-footer', $footer_link_color ) );
+			$footer_link_color_value = sanitize_hex_color( valentine_get_color_for_area( 'header-footer', $footer_link_color ) );
 			$css                    .= '.footer-widgets a, .footer-menu a{ color:' . $footer_link_color_value . ';}';
 		}
 	}
@@ -2923,7 +2923,7 @@ function twentig_twentytwenty_print_customizer_css() {
 		<?php
 	endif;
 }
-add_action( 'wp_head', 'twentig_twentytwenty_print_customizer_css' );
+add_action( 'wp_head', 'twentig_valentine_print_customizer_css' );
 
 /**
  * Remove line breaks and white space chars.
@@ -3089,7 +3089,7 @@ add_action( 'customize_controls_print_footer_scripts', 'twentig_customizer_font_
 /**
  * Display custom CSS generated by the Customizer settings inside the block editor.
  */
-function twentig_twentytwenty_print_editor_customizer_css() {
+function twentig_valentine_print_editor_customizer_css() {
 
 	wp_enqueue_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		'twentig-fonts',
@@ -3099,8 +3099,8 @@ function twentig_twentytwenty_print_editor_customizer_css() {
 	);
 
 	wp_enqueue_style(
-		'twentig-twentytwenty-editor-styles',
-		TWENTIG_ASSETS_URI . '/css/twentytwenty-editor.css',
+		'twentig-valentine-editor-styles',
+		TWENTIG_ASSETS_URI . '/css/valentine-editor.css',
 		array(),
 		TWENTIG_VERSION
 	);
@@ -3196,7 +3196,7 @@ function twentig_twentytwenty_print_editor_customizer_css() {
 
 	$css .= '.editor-styles-wrapper h6, .editor-styles-wrapper .wp-block h6 { letter-spacing: 0.03125em; }';
 
-	$accent = sanitize_hex_color( twentytwenty_get_color_for_area( 'content', 'accent' ) );
+	$accent = sanitize_hex_color( valentine_get_color_for_area( 'content', 'accent' ) );
 	$css   .= '.editor-styles-wrapper a { color: ' . $accent . '}';
 
 	$css .= '
@@ -3240,7 +3240,7 @@ function twentig_twentytwenty_print_editor_customizer_css() {
 	}
 
 	// Layout blocks adjustments.
-	if ( '#ffffff' === strtolower( twentytwenty_get_color_for_area( 'content', 'text' ) ) ) {
+	if ( '#ffffff' === strtolower( valentine_get_color_for_area( 'content', 'text' ) ) ) {
 		$css .= ':root .has-background-background-color, :root .has-subtle-background-background-color{ color: #fff; }';
 	}
 
@@ -3272,9 +3272,9 @@ function twentig_twentytwenty_print_editor_customizer_css() {
 			display: none;
 		}';
 	}
-	wp_add_inline_style( 'twentig-twentytwenty-editor-styles', $css );
+	wp_add_inline_style( 'twentig-valentine-editor-styles', $css );
 }
-add_action( 'enqueue_block_editor_assets', 'twentig_twentytwenty_print_editor_customizer_css', 20 );
+add_action( 'enqueue_block_editor_assets', 'twentig_valentine_print_editor_customizer_css', 20 );
 
 /**
  * Set up theme defaults and register support for various features.

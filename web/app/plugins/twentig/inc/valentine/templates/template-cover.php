@@ -27,7 +27,7 @@ get_header();
 			$color_overlay_style   = '';
 			$color_overlay_classes = '';
 
-			$image_url = ! post_password_required() ? get_the_post_thumbnail_url( get_the_ID(), 'twentytwenty-fullscreen' ) : '';
+			$image_url = ! post_password_required() ? get_the_post_thumbnail_url( get_the_ID(), 'valentine-fullscreen' ) : '';
 
 			if ( $image_url ) {
 				$cover_header_style   = ' style="background-image: url( ' . esc_url( $image_url ) . ' );"';
@@ -71,11 +71,11 @@ get_header();
 									<div class="to-the-content-wrapper">
 
 										<a href="#post-inner" class="to-the-content fill-children-current-color">
-											<?php twentytwenty_the_theme_svg( 'arrow-down' ); ?>
-											<div class="screen-reader-text"><?php esc_html_e( 'Scroll Down', 'twentytwenty' ); ?></div>
+											<?php valentine_the_theme_svg( 'arrow-down' ); ?>
+											<div class="screen-reader-text"><?php esc_html_e( 'Scroll Down', 'valentine' ); ?></div>
 										</a>
 
-									</div>							
+									</div>
 
 								</div><!-- .entry-header-inner -->
 							</header><!-- .entry-header -->
@@ -95,7 +95,7 @@ get_header();
 				<?php
 				wp_link_pages(
 					array(
-						'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'twentytwenty' ) . '"><span class="label">' . __( 'Pages:', 'twentytwenty' ) . '</span>',
+						'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'valentine' ) . '"><span class="label">' . __( 'Pages:', 'valentine' ) . '</span>',
 						'after'       => '</nav>',
 						'link_before' => '<span class="page-number">',
 						'link_after'  => '</span>',

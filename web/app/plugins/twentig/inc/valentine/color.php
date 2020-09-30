@@ -42,7 +42,7 @@ function twentig_get_elements_array_for_colors( $elements ) {
 
 	return $elements;
 }
-add_filter( 'twentytwenty_get_elements_array', 'twentig_get_elements_array_for_colors' );
+add_filter( 'valentine_get_elements_array', 'twentig_get_elements_array_for_colors' );
 
 /**
  * Returns CSS generated for the footer colors.
@@ -88,7 +88,7 @@ function twentig_get_footer_colors_css() {
 			foreach ( $definitions as $property => $elements ) {
 				if ( isset( $colors_settings['footer'][ $key ] ) ) {
 					$val = $colors_settings['footer'][ $key ];
-					twentytwenty_generate_css( implode( ',', $elements ), $property, $val );
+					valentine_generate_css( implode( ',', $elements ), $property, $val );
 				}
 			}
 		}

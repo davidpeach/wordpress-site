@@ -67,7 +67,7 @@ function twentig_get_footer( $name = null ) {
 
 					<?php twentig_get_footer_credits(); ?>
 					<?php twentig_get_footer_menu(); ?>
-					<?php twentig_get_footer_social_menu(); ?>			
+					<?php twentig_get_footer_social_menu(); ?>
 
 				</div><!-- .section-inner -->
 
@@ -91,20 +91,20 @@ function twentig_get_footer( $name = null ) {
 						<span class="to-the-top-long">
 							<?php
 							/* translators: %s: HTML character for up arrow */
-							printf( __( 'To the top %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
+							printf( __( 'To the top %s', 'valentine' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
 							?>
 						</span>
 						<span class="to-the-top-short">
 							<?php
 							/* translators: %s: HTML character for up arrow */
-							printf( __( 'Up %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
+							printf( __( 'Up %s', 'valentine' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
 							?>
 						</span>
 					</a><!-- .to-the-top -->
 
 				</div><!-- .section-inner -->
 
-			<?php endif; ?>	
+			<?php endif; ?>
 
 		</footer><!-- #site-footer -->
 
@@ -158,7 +158,7 @@ function twentig_get_footer_menu() {
 	if ( twentig_footer_has_nav_menu( 'footer' ) ) {
 		?>
 
-		<nav aria-label="<?php esc_attr_e( 'Footer', 'twentytwenty' ); ?>" role="navigation" class="footer-menu-wrapper">
+		<nav aria-label="<?php esc_attr_e( 'Footer', 'valentine' ); ?>" role="navigation" class="footer-menu-wrapper">
 
 			<ul class="footer-menu reset-list-style">
 				<?php
@@ -186,7 +186,7 @@ function twentig_get_footer_social_menu() {
 	if ( twentig_footer_has_nav_menu( 'social' ) && twentig_is_socials_location( 'footer' ) ) {
 		?>
 
-		<nav aria-label="<?php esc_attr_e( 'Social links', 'twentytwenty' ); ?>" class="footer-social-wrapper">
+		<nav aria-label="<?php esc_attr_e( 'Social links', 'valentine' ); ?>" class="footer-social-wrapper">
 
 			<ul class="social-menu footer-social reset-list-style social-icons fill-children-current-color">
 
@@ -225,7 +225,7 @@ function twentig_get_footer_credits() {
 	if ( 'none' !== $footer_credit ) :
 		?>
 
-	<div class="footer-credits">			
+	<div class="footer-credits">
 
 		<p class="footer-copyright">
 		<?php if ( 'custom' === $footer_credit && $credit_text ) { ?>
@@ -235,17 +235,17 @@ function twentig_get_footer_credits() {
 			<?php
 			echo date_i18n(
 				/* translators: Copyright date format, see https://secure.php.net/date */
-				_x( 'Y', 'copyright date format', 'twentytwenty' )
+				_x( 'Y', 'copyright date format', 'valentine' )
 			);
 			?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo bloginfo( 'name' ); ?></a>			
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo bloginfo( 'name' ); ?></a>
 		<?php } ?>
 		</p>
 
 		<?php if ( '' === $footer_credit ) { ?>
 			<p class="powered-by-wordpress">
 				<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>">
-					<?php esc_html_e( 'Powered by WordPress', 'twentytwenty' ); ?>
+					<?php esc_html_e( 'Powered by WordPress', 'valentine' ); ?>
 				</a>
 			</p>
 		<?php } ?>

@@ -114,7 +114,7 @@ class Twentig_Page_Templater {
 
 		$template_name = get_post_meta( $post->ID, '_wp_page_template', true );
 		$post_type     = get_post_type( $post );
-		$file          = apply_filters( 'twentig_template_page_file', TWENTIG_PATH . 'inc/twentytwenty/templates/' . $template_name, $template_name );
+		$file          = apply_filters( 'twentig_template_page_file', TWENTIG_PATH . 'inc/valentine/templates/' . $template_name, $template_name );
 
 		if ( file_exists( $file ) ) {
 			return $file;

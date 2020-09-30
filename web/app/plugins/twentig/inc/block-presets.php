@@ -130,7 +130,7 @@ function twentig_get_block_css_classes() {
 function twentig_get_editor_font_sizes() {
 	$sizes = array();
 
-	if ( 'twentytwenty' === get_template() ) {
+	if ( 'valentine' === get_template() ) {
 
 		$h1_font_size = get_theme_mod( 'twentig_h1_font_size' );
 		$h1_size_px   = 84;

@@ -83,13 +83,13 @@ require_once TWENTIG_PATH . 'inc/block-patterns.php';
 /**
  * Include Twenty Twenty specific files.
  */
-if ( 'twentytwenty' === get_template() ) {
-	require_once TWENTIG_PATH . 'inc/twentytwenty/index.php';
-	require_once TWENTIG_PATH . 'inc/twentytwenty/font.php';
-	require_once TWENTIG_PATH . 'inc/twentytwenty/color.php';
-	require_once TWENTIG_PATH . 'inc/twentytwenty/header.php';
-	require_once TWENTIG_PATH . 'inc/twentytwenty/footer.php';
-	require_once TWENTIG_PATH . 'inc/twentytwenty/blog.php';
-	require_once TWENTIG_PATH . 'inc/twentytwenty/404.php';
-	require_once TWENTIG_PATH . 'inc/twentytwenty/class-twentig-page-templater.php';
+if ( 'valentine' === get_template() ) {
+	require_once TWENTIG_PATH . 'inc/valentine/index.php';
+	require_once TWENTIG_PATH . 'inc/valentine/font.php';
+	require_once TWENTIG_PATH . 'inc/valentine/color.php';
+	require_once TWENTIG_PATH . 'inc/valentine/header.php';
+	require_once TWENTIG_PATH . 'inc/valentine/footer.php';
+	require_once TWENTIG_PATH . 'inc/valentine/blog.php';
+	require_once TWENTIG_PATH . 'inc/valentine/404.php';
+	require_once TWENTIG_PATH . 'inc/valentine/class-twentig-page-templater.php';
 }

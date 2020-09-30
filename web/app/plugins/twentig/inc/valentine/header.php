@@ -65,7 +65,7 @@ function twentig_hide_tagline( $html ) {
 	}
 	return $html;
 }
-add_filter( 'twentytwenty_site_description', 'twentig_hide_tagline' );
+add_filter( 'valentine_site_description', 'twentig_hide_tagline' );
 
 /**
  * Determines if social icons should be displayed in the location.
@@ -146,7 +146,7 @@ add_action( 'init', 'twentig_support_page_excerpt' );
  */
 function twentig_page_cover_excerpt( $template ) {
 	if ( is_page_template( 'templates/template-cover.php' ) && is_page() && has_excerpt() ) {
-		return TWENTIG_PATH . 'inc/twentytwenty/templates/template-cover.php';
+		return TWENTIG_PATH . 'inc/valentine/templates/template-cover.php';
 	}
 	return $template;
 }
